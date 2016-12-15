@@ -1,0 +1,29 @@
+.top {height: 65px; overflow: hidden;padding: 0 30px;color: #666;    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);background: #fff;;}
+.top .fr {overflow: hidden;}
+.top .fr p{float: left;line-height: 65px;border-right: #ebebeb 2px solid;padding-right: 20px;}
+.top .fr p a{ text-decoration: underline;color: #666; }
+.top .fr p a:hover  {color:#19a0fd ;}
+.top .fr ul { float: right;padding-left: 20px;padding-top: 10px;}
+.top .fr ul li {line-height: 22px;}
+.top .fr ul li i {color: #666;padding-right: 8px;}
+.top img.fl{margin-top: 16px; width: 140px;}
+.loginMain .fr .tit img { width: 85px;}
+.loginMain {width: 1120px;height: 400px; position: absolute; left: 50%; top: 50%; margin-top: -235px; margin-left: -625px;}
+.loginMain .fl img {margin-top: 34px; width: 560px;}
+.loginMain .fr { border:#eaeaea 1px solid\9;width: 400px; height: 400px;box-shadow: 0 2px 4px -1px rgba(0,0,0,.2),0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12); border-radius: 2px;padding: 0 35px;}
+.loginMain .fr p.tit{text-align: center;border-bottom: #eaeaea 1px solid; padding: 12px 0;}
+.loginInput { padding: 25px 25px 10px; width: 100%; color: #ccc; font-size: 14px; }
+.loginInput label { width: 100%;  position: relative; margin-bottom: 20px;}
+.loginInput label input { border: #ccc 1px solid; padding:0 0 0 35px; height: 38px; line-height: 38px; border-radius: 3px;}
+.loginInput label  input.inpu{width: 100%;}
+.loginInput label  input.icheck{width: 90%;}
+.loginInput label i {position: absolute;left: 10px; top: 12px;  font-size: 16px;}
+.loginInput label img {position: absolute; right: 32px; height: 36px; width: 100px;display: block; top: 1px;}
+.loginInput label i.icon-refresh {right: 3px;left: auto;cursor: pointer;}
+.loginWarning {color: #fe6470;margin-top: -10px;}
+.loginWarning i {padding-right: 5px;}
+.loginButton {display: block; color: #fff; height: 42px; line-height: 42px; background: #19a0fd; border-radius: 3px; text-align: center;     width: 88%;
+    margin: 0 auto; }
+    .loginButton:hover { text-decoration: none; color: #fff; background: #168ada;}
+.findPassword { color: #666; display: block; text-align: center; font-size: 12px; text-decoration: underline; margin-top: 10px;}
+.findPassword:hover  { color:#19a0fd ;}

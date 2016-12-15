@@ -1,0 +1,208 @@
+.top {height: 65px; padding: 0 30px;color: #666;    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);background: #fff;;}
+.top img.fl{margin-top: 11px;}
+html {
+    min-height: 100%;
+    position: relative;
+    height: 100%;
+}
+body {min-height: 100%; overflow: hidden; background: #EDEDED; height: 100%;}
+.w100{ width: 100px;}
+.h40{ height: 40px; line-height: 40px;}
+#iframePage {background: #fff; height: 100%;  }
+#navbar{position: fixed; top: 0; left: 0; right: 0;}
+.page-content {  background:#ededed ; padding:0;border-radius: 2px; height: 100%;}
+.main-container {padding-top: 65px;}
+.main-content:before, .main-content:after {
+    content: " ";
+    display: table;
+}
+.main-content {
+   
+    min-height: 100%;
+    padding: 0;
+    position: absolute;
+    left: 210px;
+      height: 100%;
+    width: 100%;
+}
+
+
+
+.main-content-inner {
+    float: left;
+    width: 100%;
+     height: 100%;}
+.mettAdd,.addAttendee { color: #19a0fd; margin: 9px 0; display: inline-block;}
+.mettAdd:hover ,.addAttendee:hover{ text-decoration: none; color:#19bbfe ;}
+.rightTop {height: 60px;  color:#333;line-height: 60px; border-bottom: #e0e1e2 1px solid ; padding: 0 20px 0 25px;}
+.leftTop { height: 50px; color: #fff; opacity: .3; filter: alpha(opacity=30);line-height: 50px; padding: 0 20px 0 25px;}
+.leftTop i {  cursor: pointer; margin-top: 18px;}
+.nav-list>li>a { height: 50px; line-height: 50px;  padding: 0 20px 0 25px; color: #c0c7d0;}
+.nav-list>li a>.arrow {right: 23px; top: 18px;color: #c0c7d0;}
+.nav-list>li .submenu>li>a {height: 50px; line-height: 50px;padding: 0 20px 0 55px;font-size: 14px}
+.nav-list>li>a i { margin-right: 10px; font-size: 15px;   }
+.nav-list>li.open>a ,.nav-list .open>a, .nav-list .open>a:hover, .nav-list .open>a:focus{ background: #19a0fd;}
+.nav-list .open>a, .nav-list .open>a:hover, .nav-list .open>a:focus { color: #fff;}
+.nav-list>li a:hover>.arrow, .nav-list>li.active>a>.arrow, .nav-list>li.open>a>.arrow { color: #fff;}
+.nav-list>li .submenu>li>a:hover {
+	text-decoration: none;
+	background: #203147;
+	color: #fff;
+}
+
+.nav-list>li .submenu>li.active>a {
+	color: #fff;
+	background: #203147;
+	font-size: 14px;
+}
+.nav-list>li.open>a { color: #fff;}
+.sidebar{ border: none; position: absolute; left: 0;}
+.kf-animateleft{
+	animation:myfirst 0.4s ease;
+	-moz-animation:myfirst 0.4s ease; 
+	-webkit-animation:myfirst 0.4s ease; 
+	-o-animation:myfirst 0.4s ease;
+}
+@keyframes myfirst
+{
+0%   {width: 210px;}
+100% {width: 60px;}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+0%   {width: 210px;}
+100% {width: 60px;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   {width: 210px;}
+100% {width: 60px;}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+0%   {width: 210px;}
+100% {width: 60px;}
+}
+.kf-animateright{
+	animation:myfirst1 0.4s ease;
+	-moz-animation:myfirst1 0.4s ease; 
+	-webkit-animation:myfirst1 0.4s ease;
+	-o-animation:myfirst1 0.4s ease; 	
+}
+
+@keyframes myfirst1
+{
+0%   {width: 60px;}
+100% {width: 210px;}
+}
+
+@-moz-keyframes myfirst1 /* Firefox */
+{
+0%   {width: 60px;}
+100% {width: 210px;}
+}
+
+@-webkit-keyframes myfirst1 /* Safari and Chrome */
+{
+0%   {width: 60px;}
+100% {width: 210px;}
+}
+
+@-o-keyframes myfirst1 /* Opera */
+{
+0%   {width: 60px;}
+100% {width: 210px;}
+}
+.mettingDl { padding: 35px 70px;}
+.mettingDl dl { padding-left: 120px; overflow: hidden; font-size: 14px; color: #333;}
+.mettingDl dl dt { width: 120px; margin-left: -120px;  float: left; line-height: 22px; padding: 9px 0; font-weight: normal;}
+.mettingDl dl dd { margin-bottom: 40px; width: 565px; overflow: hidden; position: relative;}
+.mettingDl dl dd.w100{ width: 100px;}
+.blue{ background: #19a0fd; height: 40px; line-height: 40px; color: #fff; text-align: center; border-radius: 2px;}
+.mettingDl dl dd input.wb100{ width: 490px;  padding: 0 4px; border-radius: 2px; border: none;}
+.border {border: #e0e1e2 1px solid;}
+.mettingDl dl dd em { color: #ccc;  line-height: 40px; margin-right: 10px; font-size: 12px;}
+.mettingTime { height: 20px; border: #e0e1e2 1px solid;   border-radius: 2px;}
+.mettingTime span:last-child{ border-right: none;}
+.mettingTime span { display: inline-block; border-right: #e0e1e2 1px solid; width: 42px; height: 18px; cursor: pointer;border-radius: 2px;}
+.mettingTime span.active{ background: #19a0fd; border-right: #fff 1px solid;}
+.mettingDl dl dd ul { width: 100%; color: #333;border: #e0e1e2 1px solid;}
+.mettingDl dl dd ul li { margin: 0 10px; border-bottom: #e0e1e2 1px solid; line-height: 48px; overflow: hidden;}
+.mettingDl dl dd ul li:last-child{ border-bottom: none;}
+.mettingDl dl dd ul li span {display: inline-block; text-align: center;}
+.mettingDl dl dd ul li span.s1 ,.mettingDl dl dd ul li span.s2,.mettingDl dl dd ul li span.s3{ width: 150px;  }
+.mettingDl dl dd ul li span.s4,.mettingDl dl dd ul li span.s5{ width: 35px; font-size: 16px; cursor: pointer;}
+.mettingDl dl dd ul li span.s4 { color: #757575;}
+.mettingDl dl dd ul li span.s4:hover { color: #19a0fd;}
+.mettingDl dl dd ul li span.s5 { color: #fe7782; font-size: 18px;}
+.mettingDl dl dd ul li span.s5:hover,.icon-remove:hover,.treeUl li i.icon-remove:hover{ color:#de5762 ;}
+.mettingDl dl dd ul li span.s6 { width: 380px; text-align: left; padding-left: 20px;}
+.mettingDl dl dd ul li span.s6 em { width: 30px; height: 30px; display: block; margin-top: 9px; float: left;}
+.mettingDl dl dd ul li span.s6 em img { width: 100%;}
+.layui-layer.aa { background: red;}
+.wrapper { background: #fff; height: 100%; margin: 8px 5px 0 8px; min-width: 99%;box-shadow: 0 2px 4px -1px rgba(0,0,0,.2),0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12); overflow-y: auto;}
+.popDL { padding: 20px 30px 10px 30px;}
+.popDL dl { padding-left: 10%; overflow: hidden; font-size: 14px;}
+.popDL dl dt { width: 10%; margin-left: -10%; float: left; line-height: 40px;}
+.popDL dl dd { width: 90%; padding-bottom: 15px;}
+.popDL dl dd input ,.popDL dl dd  textarea{ width: 100%;}
+.popDL dl dd input{ height: 38px; line-height: 38px;}
+.popDL dl dd  textarea { height: 120px;}
+.popDL dl dd p.hints{ text-align: right; color: #ccc; margin-top: 8px;font-size: 12px;}
+.dlBtn { display: inline-block; width: 100px; height: 40px;  border-radius:2px;line-height: 40px;text-align: center; background: #19a0fd; color: #fff;}
+.cancel{ background: #c2c2c2;}
+.dlBtn:hover{ color: #fff; background: #168ada;}
+.cancel:hover,.canelSbtn:hover { background: #b2b2b2;color: #fff; }
+.row { height: 100%; margin: 0;}
+.mettAdd i ,.addAttendee i{ font-size: 16px; padding-right: 6px;}
+.mettingUL { height: 295px; overflow-y: auto;}
+.formInp { border: #e0e1e2 1px solid; overflow: hidden; position: relative; height: 40px;}
+.formInp input { border: none; width: 100%; height: 40px; opacity: 0; z-index: 3; width: 75px; position: absolute; top: 0; right: 0;}
+.formInp a {  height: 38px; line-height: 38px; position: absolute; top: 0; right: 0; background: #19a0fd; color: #fff; width: 75px; text-align: center;}
+.formInp span { color: #ccc; padding: 0 10px;  line-height: 40px;}
+.mettingBtn { width: 360px; margin: 0 0 0 60px; height: 40px; line-height: 40px; text-align: center; color: #fff; background: #59c114; border-radius: 2px; display: block;}
+.mettingBtn:hover,.saveSbtn:hover{ background: #4ba211; color: #fff;}
+.mettingDl dl dd .mettingTime  em { position: absolute;  top:-28px; left:50px;display: block; width: 70px; color: #fff; height: 30px; line-height: 30px; background: #222; text-align: center; border-radius: 20px;}
+.mettingDl dl dd .mettingTime em i{ position: absolute; top: 21px; left: 50%; font-size: 22px; color: #222; margin-left: -6px;}
+.personMain { margin:0 45px;color: #333; font-size: 14px;}
+.personMain p.tit {  padding: 27px 30px; border-bottom: #E0E1E2 1px solid;}
+.person1 dl { padding: 30px 20px  70px 192px; overflow: hidden;}
+.person1 dl dt { width: 102px; margin-left: -102px; float: left; margin-top: 10px;}
+.person1 dl dt img { display: block; height: 100px; width: 100px;}
+.person1 dl dd { line-height: 32px;padding-left: 34px;}
+.person1 dl dd i { padding-right: 20px;   color: #757575;}
+.person1 dl dd .pname { font-size: 20px;}
+.person1 dl dd .pname  i{ padding-left: 48px;cursor: pointer;}
+.person1 dl dd em { padding-left: 10px;}
+.personUL { padding-top: 15px; padding-left: 90px;}
+.personUL  li { line-height: 30px;}
+.personUL  li span { padding-right: 50px;}
+.person3 { padding-top: 43px;}
+.person3 ul.personUL li span:first-child{ width: 180px; display: inline-block;}
+.personUL  li a { text-decoration: underline;}
+.personUL  li a:hover{ color: #19bbfe;}
+.editPname input { height: 38px; border:#E0E1E2 1px solid; line-height: 38px; width: 150px; margin-right: 15px;}
+.saveSbtn ,.canelSbtn{ display: inline-block; width: 70px; text-align: center; height: 40px; line-height: 40px; background: #59c114; color: #fff;} 
+.canelSbtn{ background: #c2c2c2;}
+.historyMain { font-size: 14px; color: #333; margin: 0 45px;}
+#self input { width: 89px;  margin: 0 10px;}
+#self input[type="text"]:focus{ border: none;outline: 0}
+#self em { color: #ccc;}
+.historySearch { overflow: hidden; margin-top: 27px;}
+.historySearch dl { width: 260px; float: left; margin-right:28px;}
+.historySearch dl dt { padding-bottom: 8px;}
+.historySearch dl dd {   width:100%; height:40px;  border: #E0E1E2 1px solid; border-radius: 2px;  }
+.historySearch dl dd  input { width: 100%;border: none; height: 38px; line-height: 38px;}
+.searchBtn { display: block;}
+.blue:hover { text-decoration: none; color: #fff; background: #168ada;}
+.ytable { margin-top: 35px;}
+.ytable table{ width: 100%;}
+.ytable td,.ytable th { border: none; border-bottom: #E0E1E2 1px solid;vertical-align: top;
+    padding: 15px; text-align: center;}
+.demo-tbl { border:none; margin-top: 0;}
+.ytable td a{ margin: 0 13px; color: #19a0fd;}
+.ytable td a:hover{ color: #19bbfe;}
+

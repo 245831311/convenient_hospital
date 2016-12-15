@@ -1,0 +1,146 @@
+.addMettMain {
+	margin: 0 10px;
+	
+}
+
+.addMettMain .panel-body {
+	padding: 0;
+	overflow: hidden;
+	border-bottom: #E0E1E2 1px solid;
+}
+
+.addMettMain .group-chat-selectable {
+	height: 100%;
+	padding: 18px 8px 18px 0;
+}
+
+. .layui-layer-page.group-chat .layui-layer-content .row {
+	margin: 0 -12px;
+}
+
+.group-chat-selectable .searchM {
+	width: 340px;
+	margin: 0 auto 18px;
+	font-size: 14px;
+	color: #ccc;
+	border: #E0E1E2 1px solid;
+	height: 38px;
+	line-height: 38px;
+	border-radius: 2px;
+	 position: relative;
+}
+
+.group-chat-selectable .searchM i {
+	margin: 12px 5px 0 14px;
+}
+
+.group-chat-selectable .searchM input {
+	border: none;
+	height: 36px;
+	float: left;
+	width: 230px;
+}
+
+.group-chat-selectable .searchM .searchBtn {
+	float: right;
+	display: block;
+	background: #ccc;
+	width: 60px;
+	text-align: center;
+	height: 38px;
+	line-height: 38px;
+	color: #fff;
+}
+
+.group-chat-list {
+	border-top: #E0E1E2 1px solid;
+	height: 366px;
+	padding: 6px 0;
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+}
+
+.group-chat-list:before {
+	display: inline-block;
+	content: "";
+	position: absolute;
+	top: 79px;
+	bottom: 7px;
+	left: 30px;
+	border: 1px dotted #ccc;
+	border-width: 0 0 0 1px;
+	z-index: 1;
+}
+
+.group-chat-middle {
+	height: 300px;
+	width: 36px;
+}
+
+.group-chat-selected .total-selected {
+	line-height: 26px;
+	padding-bottom: 12px;
+	font-style: 14px;
+}
+
+.selected-list dl dd {
+	padding-left: 10px;
+	cursor: default;
+}
+
+.group-chat-selectable {
+	border-right: #E0E1E2 1px solid;
+}
+.treeUl ul { position: relative;}
+.treeUl li i {
+	cursor: pointer;
+	 color: #19a0fd;
+	  border: #19a0fd 1px solid;
+	  font-size: 13px;
+	   padding: 1px 2px;
+	    margin-right: 5px;
+	   
+	    
+}
+.treeUl li i.icon-remove { border: none ; color: #fe6470; font-size: 16px;}
+.treeUl ul ul li i{ margin-left: 13px;}
+.treeUl { padding-left: 36px; padding-top: 12px;}
+.treeUl li { line-height: 22px;position: relative; list-style: none;}
+.treeUl li p {padding: 12px 0; }
+.treeUl li p span{ cursor: pointer;}
+.treeUl ul ul li:before{display: inline-block;
+    content: "";
+    position: absolute;
+       top: 23px;
+    left: -24px;
+    width: 20px;
+    height: 0;
+    border-top: 1px dotted #ccc;
+    z-index: 1; margin-left: 13px;}
+    .treeUl ul ul{ padding-left: 32px; }
+    .treeUl ul ul:before{    top: 35px;
+  
+    left: 28px;}
+   
+.treeUl ul li p
+:before i { margin-left: 13px;}
+ .treeUl li img { display: block; height: 30px; width: 30px; margin-left: 13px;    border-radius: 4px;}
+ .treeUl ul ul li p:before {display: inline-block;
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -13px;
+    width: 1px;
+    height: 100%;
+    border-left: 1px dotted #ccc;
+    z-index: 1;}
+    
+.treeUl li:last-child p:before,.treeUl li:last-child ul li:last-child p:before{ height: 35px; top: -11px;}
+.treeUl li:last-child ul p:before { height: 100%;}
+.total-selected { color: #ccc; font-size: 14px; line-height: 44px; margin-top: 15px;}
+#selectedList.treeUl{ padding-left: 10px;}
+.searchList{ position: absolute; top: 37px; left: 0; width: 278px;box-shadow:0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12); background: #fff; padding: 10px 0; z-index: 999;}
+.searchList li { border-bottom: #E0E1E2 1px solid; margin: 0 8px; padding: 0 16px;}
+.searchList li img { height: 30px; line-height: 30px;}
+#treeUl .icon-remove { display: none;}
+.searchList li span { padding: 0 15px;  color: #000;}

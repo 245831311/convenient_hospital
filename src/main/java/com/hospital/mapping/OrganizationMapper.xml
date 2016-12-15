@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bkybk.dao.OrganizationDao" >
+  <resultMap id="BaseResultMap" type="organization" >
+    <id column="org_id" property="orgId"/>
+    <result column="code" property="code"/>
+    <result column="create_time" property="createTime" />
+    <result column="name" property="name"  />
+    <result column="en_name" property="enName" />
+    <result column="valid" property="valid"/>
+    <result column="spare" property="spare" />
+  </resultMap>
+
+  <sql id="Base_Column_List" >
+    org_id, code, create_time, name, en_name, valid, spare
+  </sql>
+  
+  <select id="getOrganizationByUserId" resultMap="BaseResultMap" parameterType="java.util.HashMap" >
+    SELECT * FROM organization WHERE org_id=(SELECT org_id FROM org_depart_job_user WHERE user_id=#{userId} LIMIT 0,1);
+  </select>
+  
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from organization
+    where org_id = #{orgId,jdbcType=BIGINT}
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from organization
+    where org_id = #{orgId,jdbcType=BIGINT}
+  </delete>
+  
+  <insert id="insert" parameterType="organization" >
+    insert into organization (org_id, code, create_time, 
+      name, en_name, valid, spare
+      )
+    values (#{orgId,jdbcType=BIGINT}, #{code,jdbcType=VARCHAR}, #{createTime,jdbcType=BIGINT}, 
+      #{name,jdbcType=VARCHAR}, #{enName,jdbcType=VARCHAR}, #{valid,jdbcType=BIT}, #{spare,jdbcType=VARCHAR}
+      )
+  </insert>
+  
+  <insert id="insertSelective" parameterType="organization" >
+    insert into organization
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="orgId != null" >
+        org_id,
+      </if>
+      <if test="code != null" >
+        code,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="enName != null" >
+        en_name,
+      </if>
+      <if test="valid != null" >
+        valid,
+      </if>
+      <if test="spare != null" >
+        spare,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="orgId != null" >
+        #{orgId,jdbcType=BIGINT},
+      </if>
+      <if test="code != null" >
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=BIGINT},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="enName != null" >
+        #{enName,jdbcType=VARCHAR},
+      </if>
+      <if test="valid != null" >
+        #{valid,jdbcType=BIT},
+      </if>
+      <if test="spare != null" >
+        #{spare,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  
+  <update id="updateByExampleSelective" parameterType="map" >
+    update organization
+    <set >
+      <if test="record.orgId != null" >
+        org_id = #{record.orgId,jdbcType=BIGINT},
+      </if>
+      <if test="record.code != null" >
+        code = #{record.code,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null" >
+        create_time = #{record.createTime,jdbcType=BIGINT},
+      </if>
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.enName != null" >
+        en_name = #{record.enName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.valid != null" >
+        valid = #{record.valid,jdbcType=BIT},
+      </if>
+      <if test="record.spare != null" >
+        spare = #{record.spare,jdbcType=VARCHAR},
+      </if>
+    </set>
+  </update>
+  
+  <update id="updateByExample" parameterType="map" >
+    update organization
+    set org_id = #{record.orgId,jdbcType=BIGINT},
+      code = #{record.code,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=BIGINT},
+      name = #{record.name,jdbcType=VARCHAR},
+      en_name = #{record.enName,jdbcType=VARCHAR},
+      valid = #{record.valid,jdbcType=BIT},
+      spare = #{record.spare,jdbcType=VARCHAR}
+  </update>
+  
+  <update id="updateByPrimaryKeySelective" parameterType="organization" >
+    update organization
+    <set >
+      <if test="code != null" >
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=BIGINT},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="enName != null" >
+        en_name = #{enName,jdbcType=VARCHAR},
+      </if>
+      <if test="valid != null" >
+        valid = #{valid,jdbcType=BIT},
+      </if>
+      <if test="spare != null" >
+        spare = #{spare,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where org_id = #{orgId,jdbcType=BIGINT}
+  </update>
+  
+  <update id="updateByPrimaryKey" parameterType="organization" >
+    update organization
+    set code = #{code,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=BIGINT},
+      name = #{name,jdbcType=VARCHAR},
+      en_name = #{enName,jdbcType=VARCHAR},
+      valid = #{valid,jdbcType=BIT},
+      spare = #{spare,jdbcType=VARCHAR}
+    where org_id = #{orgId,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bkybk.dao.MeetingDao" >
+  <resultMap id="BaseResultMap" type="meeting" >
+    <id column="meeting_id" property="meetingId" jdbcType="BIGINT" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="sponsor_type" property="sponsorType" jdbcType="BIT" />
+    <result column="media_type" property="mediaType" jdbcType="BIT" />
+    <result column="subject" property="subject" jdbcType="VARCHAR" />
+    <result column="plan_start_time" property="planStartTime" jdbcType="BIGINT" />
+    <result column="plan_end_time" property="planEndTime" jdbcType="BIGINT" />
+    <result column="plan_long" property="planLong" jdbcType="INTEGER" />
+    <result column="real_start_time" property="realStartTime" jdbcType="BIGINT" />
+    <result column="real_end_time" property="realEndTime" jdbcType="BIGINT" />
+    <result column="real_long" property="realLong" jdbcType="INTEGER" />
+    <result column="sponsor_id" property="sponsorId" jdbcType="BIGINT" />
+    <result column="spon_pwd" property="sponPwd" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="BIT" />
+    <result column="place" property="place" jdbcType="VARCHAR" />
+    <result column="spare" property="spare" jdbcType="VARCHAR" />
+    <result column="org_id" property="orgId" jdbcType="BIGINT" />
+  </resultMap>
+
+  <sql id="Base_Column_List" >
+    meeting_id, code, sponsor_type, media_type, subject, plan_start_time, plan_end_time, 
+    plan_long, real_start_time, real_end_time, real_long, sponsor_id, spon_pwd, status, 
+    place, spare, org_id
+  </sql>
+  
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from meeting
+    where meeting_id = #{meetingId,jdbcType=BIGINT}
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from meeting
+    where meeting_id = #{meetingId,jdbcType=BIGINT}
+  </delete>
+ 
+  <insert id="insert" parameterType="meeting" >
+    insert into meeting (meeting_id, code, sponsor_type, 
+      media_type, subject, plan_start_time, 
+      plan_end_time, plan_long, real_start_time, 
+      real_end_time, real_long, sponsor_id, 
+      spon_pwd, status, place, 
+      spare, org_id)
+    values (#{meetingId,jdbcType=BIGINT}, #{code,jdbcType=VARCHAR}, #{sponsorType,jdbcType=BIT}, 
+      #{mediaType,jdbcType=BIT}, #{subject,jdbcType=VARCHAR}, #{planStartTime,jdbcType=BIGINT}, 
+      #{planEndTime,jdbcType=BIGINT}, #{planLong,jdbcType=INTEGER}, #{realStartTime,jdbcType=BIGINT}, 
+      #{realEndTime,jdbcType=BIGINT}, #{realLong,jdbcType=INTEGER}, #{sponsorId,jdbcType=BIGINT}, 
+      #{sponPwd,jdbcType=VARCHAR}, #{status,jdbcType=BIT}, #{place,jdbcType=VARCHAR}, 
+      #{spare,jdbcType=VARCHAR}, #{orgId,jdbcType=BIGINT})
+  </insert>
+ 
+  <insert id="insertSelective" parameterType="meeting" >
+    insert into meeting
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="meetingId != null" >
+        meeting_id,
+      </if>
+      <if test="code != null" >
+        code,
+      </if>
+      <if test="sponsorType != null" >
+        sponsor_type,
+      </if>
+      <if test="mediaType != null" >
+        media_type,
+      </if>
+      <if test="subject != null" >
+        subject,
+      </if>
+      <if test="planStartTime != null" >
+        plan_start_time,
+      </if>
+      <if test="planEndTime != null" >
+        plan_end_time,
+      </if>
+      <if test="planLong != null" >
+        plan_long,
+      </if>
+      <if test="realStartTime != null" >
+        real_start_time,
+      </if>
+      <if test="realEndTime != null" >
+        real_end_time,
+      </if>
+      <if test="realLong != null" >
+        real_long,
+      </if>
+      <if test="sponsorId != null" >
+        sponsor_id,
+      </if>
+      <if test="sponPwd != null" >
+        spon_pwd,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="place != null" >
+        place,
+      </if>
+      <if test="spare != null" >
+        spare,
+      </if>
+      <if test="orgId != null" >
+        org_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="meetingId != null" >
+        #{meetingId,jdbcType=BIGINT},
+      </if>
+      <if test="code != null" >
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="sponsorType != null" >
+        #{sponsorType,jdbcType=BIT},
+      </if>
+      <if test="mediaType != null" >
+        #{mediaType,jdbcType=BIT},
+      </if>
+      <if test="subject != null" >
+        #{subject,jdbcType=VARCHAR},
+      </if>
+      <if test="planStartTime != null" >
+        #{planStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="planEndTime != null" >
+        #{planEndTime,jdbcType=BIGINT},
+      </if>
+      <if test="planLong != null" >
+        #{planLong,jdbcType=INTEGER},
+      </if>
+      <if test="realStartTime != null" >
+        #{realStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="realEndTime != null" >
+        #{realEndTime,jdbcType=BIGINT},
+      </if>
+      <if test="realLong != null" >
+        #{realLong,jdbcType=INTEGER},
+      </if>
+      <if test="sponsorId != null" >
+        #{sponsorId,jdbcType=BIGINT},
+      </if>
+      <if test="sponPwd != null" >
+        #{sponPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=BIT},
+      </if>
+      <if test="place != null" >
+        #{place,jdbcType=VARCHAR},
+      </if>
+      <if test="spare != null" >
+        #{spare,jdbcType=VARCHAR},
+      </if>
+      <if test="orgId != null" >
+        #{orgId,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  
+  <update id="updateByExampleSelective" parameterType="map" >
+    update meeting
+    <set >
+      <if test="record.meetingId != null" >
+        meeting_id = #{record.meetingId,jdbcType=BIGINT},
+      </if>
+      <if test="record.code != null" >
+        code = #{record.code,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sponsorType != null" >
+        sponsor_type = #{record.sponsorType,jdbcType=BIT},
+      </if>
+      <if test="record.mediaType != null" >
+        media_type = #{record.mediaType,jdbcType=BIT},
+      </if>
+      <if test="record.subject != null" >
+        subject = #{record.subject,jdbcType=VARCHAR},
+      </if>
+      <if test="record.planStartTime != null" >
+        plan_start_time = #{record.planStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="record.planEndTime != null" >
+        plan_end_time = #{record.planEndTime,jdbcType=BIGINT},
+      </if>
+      <if test="record.planLong != null" >
+        plan_long = #{record.planLong,jdbcType=INTEGER},
+      </if>
+      <if test="record.realStartTime != null" >
+        real_start_time = #{record.realStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="record.realEndTime != null" >
+        real_end_time = #{record.realEndTime,jdbcType=BIGINT},
+      </if>
+      <if test="record.realLong != null" >
+        real_long = #{record.realLong,jdbcType=INTEGER},
+      </if>
+      <if test="record.sponsorId != null" >
+        sponsor_id = #{record.sponsorId,jdbcType=BIGINT},
+      </if>
+      <if test="record.sponPwd != null" >
+        spon_pwd = #{record.sponPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=BIT},
+      </if>
+      <if test="record.place != null" >
+        place = #{record.place,jdbcType=VARCHAR},
+      </if>
+      <if test="record.spare != null" >
+        spare = #{record.spare,jdbcType=VARCHAR},
+      </if>
+      <if test="record.orgId != null" >
+        org_id = #{record.orgId,jdbcType=BIGINT},
+      </if>
+    </set>
+  </update>
+ 
+  <update id="updateByExample" parameterType="map" >
+    update meeting
+    set meeting_id = #{record.meetingId,jdbcType=BIGINT},
+      code = #{record.code,jdbcType=VARCHAR},
+      sponsor_type = #{record.sponsorType,jdbcType=BIT},
+      media_type = #{record.mediaType,jdbcType=BIT},
+      subject = #{record.subject,jdbcType=VARCHAR},
+      plan_start_time = #{record.planStartTime,jdbcType=BIGINT},
+      plan_end_time = #{record.planEndTime,jdbcType=BIGINT},
+      plan_long = #{record.planLong,jdbcType=INTEGER},
+      real_start_time = #{record.realStartTime,jdbcType=BIGINT},
+      real_end_time = #{record.realEndTime,jdbcType=BIGINT},
+      real_long = #{record.realLong,jdbcType=INTEGER},
+      sponsor_id = #{record.sponsorId,jdbcType=BIGINT},
+      spon_pwd = #{record.sponPwd,jdbcType=VARCHAR},
+      status = #{record.status,jdbcType=BIT},
+      place = #{record.place,jdbcType=VARCHAR},
+      spare = #{record.spare,jdbcType=VARCHAR},
+      org_id = #{record.orgId,jdbcType=BIGINT}
+  </update>
+  
+  <update id="updateByPrimaryKeySelective" parameterType="meeting" >
+    update meeting
+    <set >
+      <if test="code != null" >
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="sponsorType != null" >
+        sponsor_type = #{sponsorType,jdbcType=BIT},
+      </if>
+      <if test="mediaType != null" >
+        media_type = #{mediaType,jdbcType=BIT},
+      </if>
+      <if test="subject != null" >
+        subject = #{subject,jdbcType=VARCHAR},
+      </if>
+      <if test="planStartTime != null" >
+        plan_start_time = #{planStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="planEndTime != null" >
+        plan_end_time = #{planEndTime,jdbcType=BIGINT},
+      </if>
+      <if test="planLong != null" >
+        plan_long = #{planLong,jdbcType=INTEGER},
+      </if>
+      <if test="realStartTime != null" >
+        real_start_time = #{realStartTime,jdbcType=BIGINT},
+      </if>
+      <if test="realEndTime != null" >
+        real_end_time = #{realEndTime,jdbcType=BIGINT},
+      </if>
+      <if test="realLong != null" >
+        real_long = #{realLong,jdbcType=INTEGER},
+      </if>
+      <if test="sponsorId != null" >
+        sponsor_id = #{sponsorId,jdbcType=BIGINT},
+      </if>
+      <if test="sponPwd != null" >
+        spon_pwd = #{sponPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=BIT},
+      </if>
+      <if test="place != null" >
+        place = #{place,jdbcType=VARCHAR},
+      </if>
+      <if test="spare != null" >
+        spare = #{spare,jdbcType=VARCHAR},
+      </if>
+      <if test="orgId != null" >
+        org_id = #{orgId,jdbcType=BIGINT},
+      </if>
+    </set>
+    where meeting_id = #{meetingId,jdbcType=BIGINT}
+  </update>
+  
+  <update id="updateByPrimaryKey" parameterType="meeting" >
+    update meeting
+    set code = #{code,jdbcType=VARCHAR},
+      sponsor_type = #{sponsorType,jdbcType=BIT},
+      media_type = #{mediaType,jdbcType=BIT},
+      subject = #{subject,jdbcType=VARCHAR},
+      plan_start_time = #{planStartTime,jdbcType=BIGINT},
+      plan_end_time = #{planEndTime,jdbcType=BIGINT},
+      plan_long = #{planLong,jdbcType=INTEGER},
+      real_start_time = #{realStartTime,jdbcType=BIGINT},
+      real_end_time = #{realEndTime,jdbcType=BIGINT},
+      real_long = #{realLong,jdbcType=INTEGER},
+      sponsor_id = #{sponsorId,jdbcType=BIGINT},
+      spon_pwd = #{sponPwd,jdbcType=VARCHAR},
+      status = #{status,jdbcType=BIT},
+      place = #{place,jdbcType=VARCHAR},
+      spare = #{spare,jdbcType=VARCHAR},
+      org_id = #{orgId,jdbcType=BIGINT}
+    where meeting_id = #{meetingId,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="yycg.business.dao.mapper.ResourceMapMapper" >
+  <resultMap id="BaseResultMap" type="resourceMap" >
+    <id column="resource_id" property="resourceId" jdbcType="BIGINT" />
+    <result column="ims_account" property="imsAccount" jdbcType="VARCHAR" />
+    <result column="ims_password" property="imsPassword" jdbcType="VARCHAR" />
+    <result column="auth_name" property="authName" jdbcType="VARCHAR" />
+    <result column="mediax_account" property="mediaxAccount" jdbcType="VARCHAR" />
+    <result column="mediax_password" property="mediaxPassword" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    resource_id, ims_account, ims_password, auth_name, mediax_account, mediax_password
+  </sql>
+  
+  <select id="getResourceMapList" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from resource_map
+    ORDER BY RESOURCE_ID DESC
+  </select>
+  
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from resource_map
+    where resource_id = #{resourceId,jdbcType=BIGINT}
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from resource_map
+    where resource_id = #{resourceId,jdbcType=BIGINT}
+  </delete>
+ 
+  <insert id="insert" parameterType="resourceMap" >
+    insert into resource_map (resource_id, ims_account, ims_password, 
+      auth_name, mediax_account, mediax_password
+      )
+    values (#{resourceId,jdbcType=BIGINT}, #{imsAccount,jdbcType=VARCHAR}, #{imsPassword,jdbcType=VARCHAR}, 
+      #{authName,jdbcType=VARCHAR}, #{mediaxAccount,jdbcType=VARCHAR}, #{mediaxPassword,jdbcType=VARCHAR}
+      )
+  </insert>
+  
+  <insert id="insertSelective" parameterType="resourceMap" >
+    insert into resource_map
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="resourceId != null" >
+        resource_id,
+      </if>
+      <if test="imsAccount != null" >
+        ims_account,
+      </if>
+      <if test="imsPassword != null" >
+        ims_password,
+      </if>
+      <if test="authName != null" >
+        auth_name,
+      </if>
+      <if test="mediaxAccount != null" >
+        mediax_account,
+      </if>
+      <if test="mediaxPassword != null" >
+        mediax_password,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="resourceId != null" >
+        #{resourceId,jdbcType=BIGINT},
+      </if>
+      <if test="imsAccount != null" >
+        #{imsAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="imsPassword != null" >
+        #{imsPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="authName != null" >
+        #{authName,jdbcType=VARCHAR},
+      </if>
+      <if test="mediaxAccount != null" >
+        #{mediaxAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="mediaxPassword != null" >
+        #{mediaxPassword,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  
+  <update id="updateByExampleSelective" parameterType="map" >
+    update resource_map
+    <set >
+      <if test="record.resourceId != null" >
+        resource_id = #{record.resourceId,jdbcType=BIGINT},
+      </if>
+      <if test="record.imsAccount != null" >
+        ims_account = #{record.imsAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imsPassword != null" >
+        ims_password = #{record.imsPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="record.authName != null" >
+        auth_name = #{record.authName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mediaxAccount != null" >
+        mediax_account = #{record.mediaxAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mediaxPassword != null" >
+        mediax_password = #{record.mediaxPassword,jdbcType=VARCHAR},
+      </if>
+    </set>
+  </update>
+  
+  <update id="updateByExample" parameterType="map" >
+    update resource_map
+    set resource_id = #{record.resourceId,jdbcType=BIGINT},
+      ims_account = #{record.imsAccount,jdbcType=VARCHAR},
+      ims_password = #{record.imsPassword,jdbcType=VARCHAR},
+      auth_name = #{record.authName,jdbcType=VARCHAR},
+      mediax_account = #{record.mediaxAccount,jdbcType=VARCHAR},
+      mediax_password = #{record.mediaxPassword,jdbcType=VARCHAR}
+  </update>
+ 
+  <update id="updateByPrimaryKeySelective" parameterType="resourceMap" >
+    update resource_map
+    <set >
+      <if test="imsAccount != null" >
+        ims_account = #{imsAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="imsPassword != null" >
+        ims_password = #{imsPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="authName != null" >
+        auth_name = #{authName,jdbcType=VARCHAR},
+      </if>
+      <if test="mediaxAccount != null" >
+        mediax_account = #{mediaxAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="mediaxPassword != null" >
+        mediax_password = #{mediaxPassword,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where resource_id = #{resourceId,jdbcType=BIGINT}
+  </update>
+  
+  <update id="updateByPrimaryKey" parameterType="resourceMap" >
+    update resource_map
+    set ims_account = #{imsAccount,jdbcType=VARCHAR},
+      ims_password = #{imsPassword,jdbcType=VARCHAR},
+      auth_name = #{authName,jdbcType=VARCHAR},
+      mediax_account = #{mediaxAccount,jdbcType=VARCHAR},
+      mediax_password = #{mediaxPassword,jdbcType=VARCHAR}
+    where resource_id = #{resourceId,jdbcType=BIGINT}
+  </update>
+</mapper>

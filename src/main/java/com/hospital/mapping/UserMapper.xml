@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bkybk.dao.UserDao" >
+  <resultMap id="BaseResultMap" type="user" >
+    <id column="user_id" property="userId"/>
+    <result column="name" property="name"/>
+    <result column="short_name" property="shortName"/>
+    <result column="mobile" property="mobile"/>
+    <result column="telphone" property="telphone"/>
+    <result column="password" property="password"/>
+    <result column="sex" property="sex"/>
+    <result column="staffno" property="staffno" />
+    <result column="email" property="email" />
+    <result column="valid" property="valid" />
+    <result column="create_time" property="createTime" />
+    <result column="head_path" property="headPath"/>
+    <result column="thumb_path" property="thumbPath"/>
+    <result column="index_url" property="indexUrl" />
+    <result column="is_true" property="isTrue" />
+    <result column="is_used" property="isUsed" />
+    <result column="spare" property="spare" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+    user_id, name, short_name, mobile, telphone, password, sex, staffno, email, valid, 
+    create_time, head_path, thumb_path, index_url, is_true, is_used, spare
+  </sql>
+  
+  <select id="getUserByMobile" resultMap="BaseResultMap" parameterType="java.util.HashMap" >
+    select
+    <include refid="Base_Column_List" />
+    from user
+     where mobile =  #{mobile}
+  </select>
+  
+  <select id="getUsersByUserIds" resultMap="BaseResultMap" parameterType="java.util.HashMap" >
+    select
+    <include refid="Base_Column_List" />
+    from user
+     where user_id in ${userIds}
+  </select>
+  
+  <select id="getUserByDepartId" resultMap="BaseResultMap" parameterType="java.util.HashMap" >
+    select
+     a.user_id,name,short_name,mobile,telphone,sex,staffno,email,valid,is_true,is_used,spare
+     from user a,org_depart_job_user b
+     where a.user_id = b.user_id and depart_id =  #{departId} and b.org_id = #{orgId}
+  </select>
+</mapper>

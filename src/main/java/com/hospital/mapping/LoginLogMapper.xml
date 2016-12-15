@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bkybk.dao.LoginLogDao" >
+  <resultMap id="BaseResultMap" type="loginLog" >
+    <id column="login_log_id" property="loginLogId" />
+    <result column="user_id" property="userId"  />
+    <result column="time" property="time" />
+    <result column="ip" property="ip"/>
+    <result column="address" property="address" />
+  </resultMap>
+
+
+  <sql id="Base_Column_List" >
+    login_log_id, user_id, time, ip, address
+  </sql>
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from login_log
+    where login_log_id = #{loginLogId,jdbcType=BIGINT}
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from login_log
+    where login_log_id = #{loginLogId,jdbcType=BIGINT}
+  </delete>
+
+  <insert id="insert" parameterType="loginLog" >
+    insert into login_log (login_log_id, user_id, time, ip, address)
+    values (#{loginLogId}, #{userId}, #{time}, #{ip}, #{address})
+  </insert>
+  
+  <insert id="insertSelective" parameterType="loginLog" >
+    insert into login_log
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="loginLogId != null" >
+        login_log_id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="time != null" >
+        time,
+      </if>
+      <if test="ip != null" >
+        ip,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="loginLogId != null" >
+        #{loginLogId,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="time != null" >
+        #{time,jdbcType=BIGINT},
+      </if>
+      <if test="ip != null" >
+        #{ip,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  
+  <update id="updateByExampleSelective" parameterType="map" >
+    update login_log
+    <set >
+      <if test="record.loginLogId != null" >
+        login_log_id = #{record.loginLogId,jdbcType=BIGINT},
+      </if>
+      <if test="record.userId != null" >
+        user_id = #{record.userId,jdbcType=BIGINT},
+      </if>
+      <if test="record.time != null" >
+        time = #{record.time,jdbcType=BIGINT},
+      </if>
+      <if test="record.ip != null" >
+        ip = #{record.ip,jdbcType=VARCHAR},
+      </if>
+      <if test="record.address != null" >
+        address = #{record.address,jdbcType=VARCHAR},
+      </if>
+    </set>
+  </update>
+  
+  <update id="updateByExample" parameterType="map" >
+    update login_log
+    set login_log_id = #{record.loginLogId,jdbcType=BIGINT},
+      user_id = #{record.userId,jdbcType=BIGINT},
+      time = #{record.time,jdbcType=BIGINT},
+      ip = #{record.ip,jdbcType=VARCHAR},
+      address = #{record.address,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="loginLog" >
+    update login_log
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="time != null" >
+        time = #{time,jdbcType=BIGINT},
+      </if>
+      <if test="ip != null" >
+        ip = #{ip,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where login_log_id = #{loginLogId,jdbcType=BIGINT}
+  </update>
+  
+  <update id="updateByPrimaryKey" parameterType="loginLog" >
+    update login_log
+    set user_id = #{userId,jdbcType=BIGINT},
+      time = #{time,jdbcType=BIGINT},
+      ip = #{ip,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR}
+    where login_log_id = #{loginLogId,jdbcType=BIGINT}
+  </update>
+</mapper>

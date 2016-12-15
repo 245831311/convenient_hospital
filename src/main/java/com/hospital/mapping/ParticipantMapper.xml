@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bkybk.dao.ParticipantDao" >
+  <resultMap id="BaseResultMap" type="participant" >
+    <id column="participant_id" property="participantId" jdbcType="BIGINT" />
+    <result column="metting_id" property="mettingId" jdbcType="BIGINT" />
+    <result column="user_id" property="userId" jdbcType="BIGINT" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="is_invited" property="isInvited" jdbcType="BIT" />
+    <result column="is_participated" property="isParticipated" jdbcType="BIT" />
+    <result column="resource_id" property="resourceId" jdbcType="BIGINT" />
+    <result column="role" property="role" jdbcType="BIT" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="is_reserved" property="isReserved" jdbcType="BIT" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+    participant_id, metting_id, user_id, phone, name, is_invited, is_participated, resource_id, 
+    role, password, is_reserved
+  </sql>
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from participant
+    where participant_id = #{participantId,jdbcType=BIGINT}
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from participant
+    where participant_id = #{participantId,jdbcType=BIGINT}
+  </delete>
+  
+  <insert id="insert" parameterType="participant" >
+    insert into participant (participant_id, metting_id, user_id, 
+      phone, name, is_invited, 
+      is_participated, resource_id, role, 
+      password, is_reserved)
+    values (#{participantId,jdbcType=BIGINT}, #{mettingId,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT}, 
+      #{phone,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{isInvited,jdbcType=BIT}, 
+      #{isParticipated,jdbcType=BIT}, #{resourceId,jdbcType=BIGINT}, #{role,jdbcType=BIT}, 
+      #{password,jdbcType=VARCHAR}, #{isReserved,jdbcType=BIT})
+  </insert>
+  
+  <insert id="batchInsertParticipants" parameterType="java.util.List" >
+    insert into participant (participant_id, metting_id, user_id, 
+      phone, name, is_invited, 
+      is_participated, resource_id, role, 
+      password, is_reserved)
+    values
+    <foreach collection="list" item="item" index="index" separator="," >  
+        (#{item.participantId,jdbcType=BIGINT}, #{item.mettingId,jdbcType=BIGINT}, #{item.userId,jdbcType=BIGINT}, 
+      #{item.phone,jdbcType=VARCHAR}, #{item.name,jdbcType=VARCHAR}, #{item.isInvited,jdbcType=BIT}, 
+      #{item.isParticipated,jdbcType=BIT}, #{item.resourceId,jdbcType=BIGINT}, #{item.role,jdbcType=BIT}, 
+      #{item.password,jdbcType=VARCHAR}, #{item.isReserved,jdbcType=BIT})
+    </foreach>
+  </insert>
+ 
+  <insert id="insertSelective" parameterType="participant" >
+    insert into participant
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="participantId != null" >
+        participant_id,
+      </if>
+      <if test="mettingId != null" >
+        metting_id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="isInvited != null" >
+        is_invited,
+      </if>
+      <if test="isParticipated != null" >
+        is_participated,
+      </if>
+      <if test="resourceId != null" >
+        resource_id,
+      </if>
+      <if test="role != null" >
+        role,
+      </if>
+      <if test="password != null" >
+        password,
+      </if>
+      <if test="isReserved != null" >
+        is_reserved,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="participantId != null" >
+        #{participantId,jdbcType=BIGINT},
+      </if>
+      <if test="mettingId != null" >
+        #{mettingId,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="isInvited != null" >
+        #{isInvited,jdbcType=BIT},
+      </if>
+      <if test="isParticipated != null" >
+        #{isParticipated,jdbcType=BIT},
+      </if>
+      <if test="resourceId != null" >
+        #{resourceId,jdbcType=BIGINT},
+      </if>
+      <if test="role != null" >
+        #{role,jdbcType=BIT},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="isReserved != null" >
+        #{isReserved,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+ 
+  <update id="updateByExampleSelective" parameterType="map" >
+    update participant
+    <set >
+      <if test="record.participantId != null" >
+        participant_id = #{record.participantId,jdbcType=BIGINT},
+      </if>
+      <if test="record.mettingId != null" >
+        metting_id = #{record.mettingId,jdbcType=BIGINT},
+      </if>
+      <if test="record.userId != null" >
+        user_id = #{record.userId,jdbcType=BIGINT},
+      </if>
+      <if test="record.phone != null" >
+        phone = #{record.phone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isInvited != null" >
+        is_invited = #{record.isInvited,jdbcType=BIT},
+      </if>
+      <if test="record.isParticipated != null" >
+        is_participated = #{record.isParticipated,jdbcType=BIT},
+      </if>
+      <if test="record.resourceId != null" >
+        resource_id = #{record.resourceId,jdbcType=BIGINT},
+      </if>
+      <if test="record.role != null" >
+        role = #{record.role,jdbcType=BIT},
+      </if>
+      <if test="record.password != null" >
+        password = #{record.password,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isReserved != null" >
+        is_reserved = #{record.isReserved,jdbcType=BIT},
+      </if>
+    </set>
+  </update>
+  
+  <update id="updateByExample" parameterType="map" >
+    update participant
+    set participant_id = #{record.participantId,jdbcType=BIGINT},
+      metting_id = #{record.mettingId,jdbcType=BIGINT},
+      user_id = #{record.userId,jdbcType=BIGINT},
+      phone = #{record.phone,jdbcType=VARCHAR},
+      name = #{record.name,jdbcType=VARCHAR},
+      is_invited = #{record.isInvited,jdbcType=BIT},
+      is_participated = #{record.isParticipated,jdbcType=BIT},
+      resource_id = #{record.resourceId,jdbcType=BIGINT},
+      role = #{record.role,jdbcType=BIT},
+      password = #{record.password,jdbcType=VARCHAR},
+      is_reserved = #{record.isReserved,jdbcType=BIT}
+  </update>
+ 
+  <update id="updateByPrimaryKeySelective" parameterType="participant" >
+    update participant
+    <set >
+      <if test="mettingId != null" >
+        metting_id = #{mettingId,jdbcType=BIGINT},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="isInvited != null" >
+        is_invited = #{isInvited,jdbcType=BIT},
+      </if>
+      <if test="isParticipated != null" >
+        is_participated = #{isParticipated,jdbcType=BIT},
+      </if>
+      <if test="resourceId != null" >
+        resource_id = #{resourceId,jdbcType=BIGINT},
+      </if>
+      <if test="role != null" >
+        role = #{role,jdbcType=BIT},
+      </if>
+      <if test="password != null" >
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="isReserved != null" >
+        is_reserved = #{isReserved,jdbcType=BIT},
+      </if>
+    </set>
+    where participant_id = #{participantId,jdbcType=BIGINT}
+  </update>
+ 
+  <update id="updateByPrimaryKey" parameterType="participant" >
+    update participant
+    set metting_id = #{mettingId,jdbcType=BIGINT},
+      user_id = #{userId,jdbcType=BIGINT},
+      phone = #{phone,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      is_invited = #{isInvited,jdbcType=BIT},
+      is_participated = #{isParticipated,jdbcType=BIT},
+      resource_id = #{resourceId,jdbcType=BIGINT},
+      role = #{role,jdbcType=BIT},
+      password = #{password,jdbcType=VARCHAR},
+      is_reserved = #{isReserved,jdbcType=BIT}
+    where participant_id = #{participantId,jdbcType=BIGINT}
+  </update>
+</mapper>

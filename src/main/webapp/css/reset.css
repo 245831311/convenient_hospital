@@ -1,0 +1,219 @@
+﻿/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	border: 0;
+	font-size: 12px;
+	font: inherit;
+	vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	font-style: normal;
+	font-family: "微软雅黑";
+	text-decoration: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block
+}
+
+body {
+	line-height: 1
+}
+
+ol,
+ul {
+	list-style: none
+}
+
+blockquote,
+q {
+	quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: none
+}
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+	
+	color: #858585;
+	background-color: #fff;
+	border: 1px solid #d5d5d5;
+	padding: 5px 4px;
+	line-height: 1.2;
+	font-size: 12px;
+	font-family: inherit;
+	-webkit-box-shadow: none!important;
+	box-shadow: none!important;
+	-webkit-transition-duration: .1s;
+	transition-duration: .1s;
+	resize: none;
+	border: #e0e1e2 1px solid;
+	border-radius: 2px;
+}
+a:hover,a:link{ text-decoration: none;}
+textarea:hover,
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="datetime"]:hover,
+input[type="datetime-local"]:hover,
+input[type="date"]:hover,
+input[type="month"]:hover,
+input[type="time"]:hover,
+input[type="week"]:hover,
+input[type="number"]:hover,
+input[type="email"]:hover,
+input[type="url"]:hover,
+input[type="search"]:hover,
+input[type="tel"]:hover,
+input[type="color"]:hover {
+	border-color: #b5b5b5
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	color: #666;
+	border-color: #19a0fd;
+	background-color: #fff;
+	outline: 0
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+.fr {float: right;}
+.fl{float: left;}
+.hide-1{ display: none;}
+.txl { text-align: left;}
+.txc { text-align: center;}
+.txr{ text-align: right;}
+.mr30{ margin-right: 30px;}
+.ml30{ margin-left: 30px;}
+.mt15{ margin-top: 15px;}
+.mr50{ margin-right: 50px;}
+.mr15{ margin-right: 15px;}
+.mt22{ margin-top: 22px;}
+.w10 { width: 10%;}
+.w20 { width: 20%;}

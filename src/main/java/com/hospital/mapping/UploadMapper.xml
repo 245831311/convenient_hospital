@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bkybk.dao.UploadDao" >
+  <resultMap id="BaseResultMap" type="upload" >
+    <id column="upload_id" property="uploadId"/>
+    <result column="file_name" property="fileName"  />
+    <result column="file_type" property="fileType" />
+    <result column="file_size" property="fileSize"  />
+    <result column="file_path" property="filePath"  />
+    <result column="record_id" property="recordId" />
+    <result column="create_time" property="createTime" />
+    <result column="creator" property="creator" />
+    <result column="spare" property="spare"  />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+    upload_id, file_name, file_type, file_size, file_path, record_id, create_time, creator, 
+    spare
+  </sql>
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from upload
+    where upload_id = #{uploadId,jdbcType=BIGINT}
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from upload
+    where upload_id = #{uploadId,jdbcType=BIGINT}
+  </delete>
+  
+  <insert id="insert" parameterType="upload" >
+    insert into upload (upload_id, file_name, file_type, 
+      file_size, file_path, record_id, 
+      create_time, creator, spare
+      )
+    values (#{uploadId,jdbcType=BIGINT}, #{fileName,jdbcType=VARCHAR}, #{fileType,jdbcType=VARCHAR}, 
+      #{fileSize,jdbcType=VARCHAR}, #{filePath,jdbcType=VARCHAR}, #{recordId,jdbcType=BIGINT}, 
+      #{createTime,jdbcType=BIGINT}, #{creator,jdbcType=BIGINT}, #{spare,jdbcType=VARCHAR}
+      )
+  </insert>
+  
+  <insert id="insertSelective" parameterType="upload" >
+    insert into upload
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="uploadId != null" >
+        upload_id,
+      </if>
+      <if test="fileName != null" >
+        file_name,
+      </if>
+      <if test="fileType != null" >
+        file_type,
+      </if>
+      <if test="fileSize != null" >
+        file_size,
+      </if>
+      <if test="filePath != null" >
+        file_path,
+      </if>
+      <if test="recordId != null" >
+        record_id,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="creator != null" >
+        creator,
+      </if>
+      <if test="spare != null" >
+        spare,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="uploadId != null" >
+        #{uploadId,jdbcType=BIGINT},
+      </if>
+      <if test="fileName != null" >
+        #{fileName,jdbcType=VARCHAR},
+      </if>
+      <if test="fileType != null" >
+        #{fileType,jdbcType=VARCHAR},
+      </if>
+      <if test="fileSize != null" >
+        #{fileSize,jdbcType=VARCHAR},
+      </if>
+      <if test="filePath != null" >
+        #{filePath,jdbcType=VARCHAR},
+      </if>
+      <if test="recordId != null" >
+        #{recordId,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=BIGINT},
+      </if>
+      <if test="creator != null" >
+        #{creator,jdbcType=BIGINT},
+      </if>
+      <if test="spare != null" >
+        #{spare,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <update id="updateByExampleSelective" parameterType="map" >
+    update upload
+    <set >
+      <if test="record.uploadId != null" >
+        upload_id = #{record.uploadId,jdbcType=BIGINT},
+      </if>
+      <if test="record.fileName != null" >
+        file_name = #{record.fileName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.fileType != null" >
+        file_type = #{record.fileType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.fileSize != null" >
+        file_size = #{record.fileSize,jdbcType=VARCHAR},
+      </if>
+      <if test="record.filePath != null" >
+        file_path = #{record.filePath,jdbcType=VARCHAR},
+      </if>
+      <if test="record.recordId != null" >
+        record_id = #{record.recordId,jdbcType=BIGINT},
+      </if>
+      <if test="record.createTime != null" >
+        create_time = #{record.createTime,jdbcType=BIGINT},
+      </if>
+      <if test="record.creator != null" >
+        creator = #{record.creator,jdbcType=BIGINT},
+      </if>
+      <if test="record.spare != null" >
+        spare = #{record.spare,jdbcType=VARCHAR},
+      </if>
+    </set>
+  </update>
+  
+  <update id="updateByExample" parameterType="map" >
+    update upload
+    set upload_id = #{record.uploadId,jdbcType=BIGINT},
+      file_name = #{record.fileName,jdbcType=VARCHAR},
+      file_type = #{record.fileType,jdbcType=VARCHAR},
+      file_size = #{record.fileSize,jdbcType=VARCHAR},
+      file_path = #{record.filePath,jdbcType=VARCHAR},
+      record_id = #{record.recordId,jdbcType=BIGINT},
+      create_time = #{record.createTime,jdbcType=BIGINT},
+      creator = #{record.creator,jdbcType=BIGINT},
+      spare = #{record.spare,jdbcType=VARCHAR}
+  </update>
+ 
+  <update id="updateByPrimaryKeySelective" parameterType="upload" >
+    update upload
+    <set >
+      <if test="fileName != null" >
+        file_name = #{fileName,jdbcType=VARCHAR},
+      </if>
+      <if test="fileType != null" >
+        file_type = #{fileType,jdbcType=VARCHAR},
+      </if>
+      <if test="fileSize != null" >
+        file_size = #{fileSize,jdbcType=VARCHAR},
+      </if>
+      <if test="filePath != null" >
+        file_path = #{filePath,jdbcType=VARCHAR},
+      </if>
+      <if test="recordId != null" >
+        record_id = #{recordId,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=BIGINT},
+      </if>
+      <if test="creator != null" >
+        creator = #{creator,jdbcType=BIGINT},
+      </if>
+      <if test="spare != null" >
+        spare = #{spare,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where upload_id = #{uploadId,jdbcType=BIGINT}
+  </update>
+  
+  <update id="updateByPrimaryKey" parameterType="upload" >
+    update upload
+    set file_name = #{fileName,jdbcType=VARCHAR},
+      file_type = #{fileType,jdbcType=VARCHAR},
+      file_size = #{fileSize,jdbcType=VARCHAR},
+      file_path = #{filePath,jdbcType=VARCHAR},
+      record_id = #{recordId,jdbcType=BIGINT},
+      create_time = #{createTime,jdbcType=BIGINT},
+      creator = #{creator,jdbcType=BIGINT},
+      spare = #{spare,jdbcType=VARCHAR}
+    where upload_id = #{uploadId,jdbcType=BIGINT}
+  </update>
+</mapper>

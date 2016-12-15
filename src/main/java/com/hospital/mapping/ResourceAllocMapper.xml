@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bkybk.dao.ResourceDao" >
+  <resultMap id="BaseResultMap" type="resourceAlloc" >
+    <id column="org_id" property="orgId" jdbcType="BIGINT" />
+    <result column="datetime" property="datetime" jdbcType="BIGINT" />
+    <result column="time_section" property="timeSection" jdbcType="TINYINT" />
+    <result column="alloc_count" property="allocCount" jdbcType="TINYINT" />
+    <result column="alloc_sets" property="allocSets" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <sql id="Base_Column_List" >
+    org_id, datetime, time_section, alloc_count, alloc_sets
+  </sql>
+  
+  <select id="getResourcesByTimeSection" resultMap="BaseResultMap" parameterType="java.util.HashMap" >
+    select 
+    <include refid="Base_Column_List" />
+    from resource_alloc
+    where org_id = #{orgId}
+    AND dateTime = #{dateTime}
+    AND timeSection = #{timeSection}
+  </select>
+  
+  <!--解决解析器报错，<>&<=等运算符 add by yubing -->
+  <select id="getMaxResourcesByTimeScope" resultMap="BaseResultMap" parameterType="java.util.HashMap" >
+  	<![CDATA[ 
+	    SELECT
+		org_id, datetime, time_section, alloc_count, alloc_sets
+		FROM
+			resource_alloc
+		WHERE
+			org_id = #{orgId}
+		AND datetime = #{dateTime}
+		AND time_section>#{startColumn} AND time_section<=#{endColumn}
+		ORDER BY  alloc_count desc LIMIT 0,1
+	]]> 
+  </select>
+  
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from resource_alloc
+    where org_id = #{orgId,jdbcType=BIGINT}
+  </select>
+ 
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from resource_alloc
+    where org_id = #{orgId,jdbcType=BIGINT}
+  </delete>
+  
+  <insert id="insert" parameterType="resourceAlloc" >
+    insert into resource_alloc (org_id, datetime, time_section, 
+      alloc_count, alloc_sets)
+    values (#{orgId,jdbcType=BIGINT}, #{datetime,jdbcType=BIGINT}, #{timeSection,jdbcType=TINYINT}, 
+      #{allocCount,jdbcType=TINYINT}, #{allocSets,jdbcType=VARCHAR})
+  </insert>
+  
+  <insert id="insertSelective" parameterType="resourceAlloc" >
+    insert into resource_alloc
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="orgId != null" >
+        org_id,
+      </if>
+      <if test="datetime != null" >
+        datetime,
+      </if>
+      <if test="timeSection != null" >
+        time_section,
+      </if>
+      <if test="allocCount != null" >
+        alloc_count,
+      </if>
+      <if test="allocSets != null" >
+        alloc_sets,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="orgId != null" >
+        #{orgId,jdbcType=BIGINT},
+      </if>
+      <if test="datetime != null" >
+        #{datetime,jdbcType=BIGINT},
+      </if>
+      <if test="timeSection != null" >
+        #{timeSection,jdbcType=TINYINT},
+      </if>
+      <if test="allocCount != null" >
+        #{allocCount,jdbcType=TINYINT},
+      </if>
+      <if test="allocSets != null" >
+        #{allocSets,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  
+  <update id="updateByExampleSelective" parameterType="map" >
+    update resource_alloc
+    <set >
+      <if test="record.orgId != null" >
+        org_id = #{record.orgId,jdbcType=BIGINT},
+      </if>
+      <if test="record.datetime != null" >
+        datetime = #{record.datetime,jdbcType=BIGINT},
+      </if>
+      <if test="record.timeSection != null" >
+        time_section = #{record.timeSection,jdbcType=TINYINT},
+      </if>
+      <if test="record.allocCount != null" >
+        alloc_count = #{record.allocCount,jdbcType=TINYINT},
+      </if>
+      <if test="record.allocSets != null" >
+        alloc_sets = #{record.allocSets,jdbcType=VARCHAR},
+      </if>
+    </set>
+  </update>
+  
+  <update id="updateByExample" parameterType="map" >
+    update resource_alloc
+    set org_id = #{record.orgId,jdbcType=BIGINT},
+      datetime = #{record.datetime,jdbcType=BIGINT},
+      time_section = #{record.timeSection,jdbcType=TINYINT},
+      alloc_count = #{record.allocCount,jdbcType=TINYINT},
+      alloc_sets = #{record.allocSets,jdbcType=VARCHAR}
+  </update>
+  
+  <update id="updateByPrimaryKeySelective" parameterType="resourceAlloc" >
+    update resource_alloc
+    <set >
+      <if test="datetime != null" >
+        datetime = #{datetime,jdbcType=BIGINT},
+      </if>
+      <if test="timeSection != null" >
+        time_section = #{timeSection,jdbcType=TINYINT},
+      </if>
+      <if test="allocCount != null" >
+        alloc_count = #{allocCount,jdbcType=TINYINT},
+      </if>
+      <if test="allocSets != null" >
+        alloc_sets = #{allocSets,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where org_id = #{orgId,jdbcType=BIGINT}
+  </update>
+  
+  <update id="updateByPrimaryKey" parameterType="resourceAlloc" >
+    update resource_alloc
+    set datetime = #{datetime,jdbcType=BIGINT},
+      time_section = #{timeSection,jdbcType=TINYINT},
+      alloc_count = #{allocCount,jdbcType=TINYINT},
+      alloc_sets = #{allocSets,jdbcType=VARCHAR}
+    where org_id = #{orgId,jdbcType=BIGINT}
+  </update>
+</mapper>
