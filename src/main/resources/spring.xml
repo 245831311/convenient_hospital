@@ -14,6 +14,6 @@
 	<context:property-placeholder location="classpath:jdbc.properties" />
 
 	<!-- 自动扫描(自动注入) -->
-	<context:component-scan base-package="com.bkybk" />
+	<context:component-scan base-package="com.hospital" />
 	
 </beans>

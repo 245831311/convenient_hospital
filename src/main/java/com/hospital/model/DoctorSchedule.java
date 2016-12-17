@@ -2,7 +2,7 @@ package com.hospital.model;
 
 import java.io.Serializable;
 
-public class User implements Serializable{
+public class DoctorSchedule implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 
@@ -14,9 +14,15 @@ public class User implements Serializable{
 	
 	private String mobile;
 	
-	private String identity;
-	
 	private String password;
+	
+	private int code;
+	
+	private String department;
+	
+	private String section;
+	
+	private String description;
 	
 	private String headUrl;
 	
@@ -54,20 +60,44 @@ public class User implements Serializable{
 		this.mobile = mobile;
 	}
 
-	public String getIdentity() {
-		return identity;
-	}
-
-	public void setIdentity(String identity) {
-		this.identity = identity;
-	}
-
 	public String getPassword() {
 		return password;
 	}
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public int getCode() {
+		return code;
+	}
+
+	public void setCode(int code) {
+		this.code = code;
+	}
+
+	public String getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+
+	public String getSection() {
+		return section;
+	}
+
+	public void setSection(String section) {
+		this.section = section;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public String getHeadUrl() {
@@ -88,10 +118,11 @@ public class User implements Serializable{
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", nickName=" + nickName + ", email=" + email
-				+ ", mobile=" + mobile + ", identity=" + identity
-				+ ", password=" + password + ", headUrl=" + headUrl
-				+ ", createTime=" + createTime + "]";
+		return "Doctor [id=" + id + ", nickName=" + nickName + ", email="
+				+ email + ", mobile=" + mobile + ", password=" + password
+				+ ", code=" + code + ", department=" + department
+				+ ", section=" + section + ", description=" + description
+				+ ", headUrl=" + headUrl + ", createTime=" + createTime + "]";
 	}
 	
 }

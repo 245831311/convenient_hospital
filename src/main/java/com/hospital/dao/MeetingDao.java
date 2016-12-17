@@ -12,7 +12,7 @@ import com.hospital.util.IdWorkerUtil;
 /**
  * 会议DAO
  * @author yubing
- *
+ * 
  */
 @Repository("meetingDao")
 public class MeetingDao extends MybatisBaseDao<Object,String>{

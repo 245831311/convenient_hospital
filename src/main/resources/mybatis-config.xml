@@ -9,17 +9,17 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<!-- 别名定义 -->
 	<typeAliases>
 		<!-- 批量别名定义  指定包名，mybatis自动扫描包中的po类，自动定义别名，别名就是类名（首字母大写或小写都可以） -->
-		<typeAlias alias="user" type="com.bkybk.model.User"/>
-		<typeAlias alias="loginLog" type="com.bkybk.model.LoginLog"/>
-		<typeAlias alias="agenda" type="com.bkybk.model.Agenda"/>
-		<typeAlias alias="organization" type="com.bkybk.model.Organization"/>
-		<typeAlias alias="department" type="com.bkybk.model.Department"/>
-		<typeAlias alias="departtree" type="com.bkybk.model.DepartTree"/>
-		<typeAlias alias="upload" type="com.bkybk.model.Upload"/>
-		<typeAlias alias="meeting" type="com.bkybk.model.Meeting"/>
-		<typeAlias alias="resourceAlloc" type="com.bkybk.model.ResourceAlloc"/>
-		<typeAlias alias="resourceMap" type="com.bkybk.model.ResourceMap"/>
-		<typeAlias alias="participant" type="com.bkybk.model.Participant"/>
-		<typeAlias alias="parent" type="com.bkybk.model.ParentTree"/>
+		<!-- <typeAlias alias="user" type="com.hospital.model.User"/>
+		<typeAlias alias="loginLog" type="com.hospital.model.LoginLog"/>
+		<typeAlias alias="agenda" type="com.hospital.model.Agenda"/>
+		<typeAlias alias="organization" type="com.hospital.model.Organization"/>
+		<typeAlias alias="department" type="com.hospital.model.Department"/>
+		<typeAlias alias="departtree" type="com.hospital.model.DepartTree"/>
+		<typeAlias alias="upload" type="com.hospital.model.Upload"/>
+		<typeAlias alias="meeting" type="com.hospital.model.Meeting"/>
+		<typeAlias alias="resourceAlloc" type="com.hospital.model.ResourceAlloc"/>
+		<typeAlias alias="resourceMap" type="com.hospital.model.ResourceMap"/>
+		<typeAlias alias="participant" type="com.hospital.model.Participant"/>
+		<typeAlias alias="parent" type="com.hospital.model.ParentTree"/> -->
 	</typeAliases>
 </configuration>
