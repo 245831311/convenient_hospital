@@ -2,9 +2,8 @@ package com.hospital.common;
 
 /**
  * 
- * rpc服务调用异常
+ * 服务调用异常
  * 
- * @author chenxb
  *
  */
 public class ServiceException extends Exception {

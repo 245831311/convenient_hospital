@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.bkybk.dao.UserDao" >
-  <resultMap id="BaseResultMap" type="user" >
-    <id column="user_id" property="userId"/>
-    <result column="name" property="name"/>
-    <result column="short_name" property="shortName"/>
-    <result column="mobile" property="mobile"/>
-    <result column="telphone" property="telphone"/>
-    <result column="password" property="password"/>
-    <result column="sex" property="sex"/>
-    <result column="staffno" property="staffno" />
-    <result column="email" property="email" />
-    <result column="valid" property="valid" />
-    <result column="create_time" property="createTime" />
-    <result column="head_path" property="headPath"/>
-    <result column="thumb_path" property="thumbPath"/>
-    <result column="index_url" property="indexUrl" />
-    <result column="is_true" property="isTrue" />
-    <result column="is_used" property="isUsed" />
-    <result column="spare" property="spare" />
+<mapper namespace="com.hospital.dao.UserDao" >
+  <resultMap id="UserResultMap" type="user" >
+    <id column="ID" property="id"/>
+    <result column="NICKNAME" property="nickname"/>
+    <result column="EMAIL" property="email"/>
+    <result column="MOBILE" property="mobile"/>
+    <result column="IDENTITY" property="identity"/>
+    <result column="PASSWORD" property="password"/>
+    <result column="HEAD_URL" property="headUrl"/>
+    <result column="CREATE_TIME" property="createTime" />
   </resultMap>
   
   <sql id="Base_Column_List" >
@@ -26,7 +17,7 @@
     create_time, head_path, thumb_path, index_url, is_true, is_used, spare
   </sql>
   
-  <select id="getUserByMobile" resultMap="BaseResultMap" parameterType="java.util.HashMap" >
+  <select id="getUserById" resultMap="UserResultMap" parameterType="java.util.HashMap" >
     select
     <include refid="Base_Column_List" />
     from user

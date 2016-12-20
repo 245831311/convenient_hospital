@@ -7,8 +7,6 @@ import org.apache.ibatis.session.SqlSession;
 
 /**
  * 基于Mybatis的基础泛型DAO实现类。
- * 
- * @author 陈茂德
  * 		
  * @param <T>
  *            业务实体类型

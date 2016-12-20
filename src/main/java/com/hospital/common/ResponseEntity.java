@@ -5,7 +5,6 @@ import java.util.Map;
 /**
  * HTTP响应Entity基类
  * 
- * @author chenxb
  *
  */
 public class ResponseEntity implements java.io.Serializable {

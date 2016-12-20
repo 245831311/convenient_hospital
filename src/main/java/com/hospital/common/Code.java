@@ -3,8 +3,6 @@ package com.hospital.common;
 /**
  * 返回码定义
  * 
- * @author chenxb
- *
  */
 public interface Code {
 	/**
