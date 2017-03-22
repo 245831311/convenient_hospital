@@ -1,4 +1,4 @@
-package com.hospital.service.impl;
+/*package com.hospital.service.impl;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -24,11 +24,11 @@ import com.hospital.util.IdWorkerUtil;
 import com.hospital.util.RedisUtil;
 import com.hospital.util.ResourcesUtil;
 import com.hospital.util.SerializableUtils;
-/**
+*//**
  * 参会人服务实现类
  * @author yubing
  *
- */
+ *//*
 @Service("participantService")
 public class ParticipantServiceImpl implements IParticipantService{
 	@Resource(name="participantDao")
@@ -39,14 +39,14 @@ public class ParticipantServiceImpl implements IParticipantService{
 	@Autowired
 	private HttpServletRequest request;
 	
-	/**
+	*//**
 	 * 获取所有参会人列表
 	 * 1、如果redis中有参会人列表，查询出所有。
 	 * 2、如果redis中没有参会人列表，添加当前人员到参会人列表，并指定为主持人。
 	 * 3、存放到redis。
 	 * 
 	 * @author yubing
-	 */
+	 *//*
 	@Override
 	public List<Participant> getParticipantsFromCache() throws ServiceException {
 		String radisKey = ResourcesUtil.getRedisKey(request,AppConstants.REDIS_PARTICIPANTS);
@@ -216,3 +216,4 @@ public class ParticipantServiceImpl implements IParticipantService{
 		return participantDao.batchInsertParticipants(participants);
 	}
 }
+*/

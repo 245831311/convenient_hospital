@@ -1,4 +1,4 @@
-package com.hospital.dao;
+/*package com.hospital.dao;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,11 +10,11 @@ import com.hospital.common.MybatisBaseDao;
 import com.hospital.common.ServiceException;
 import com.hospital.model.Organization;
 
-/**
+*//**
  * 用户登陆日志DAO
  * @author yubing
  *
- */
+ *//*
 @Repository("organizationDao")
 public class OrganizationDao extends MybatisBaseDao<Object,String>{
 	public Organization getOrganizationByUserId(String userId) throws ServiceException{
@@ -27,3 +27,4 @@ public class OrganizationDao extends MybatisBaseDao<Object,String>{
 		}
 	}
 }
+*/

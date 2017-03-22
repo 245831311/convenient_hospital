@@ -1,4 +1,4 @@
-package com.hospital.action;
+/*package com.hospital.action;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,13 +17,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.hospital.common.Code;
 import com.hospital.common.ResponseEntity;
-import com.hospital.model.Agenda;
 import com.hospital.service.IAgendaService;
-/**
+*//**
  * 用户控制器
  * @author yubing
  *
- */
+ *//*
 @Controller
 @RequestMapping("/agendaController")
 public class AgendaController extends BaseController{
@@ -31,14 +30,14 @@ public class AgendaController extends BaseController{
 	@Resource(name="agendaService")
 	private IAgendaService agendaService;
 	
-	/**
+	*//**
 	 * 发起会议中添加议程，保存到radis缓存，需要提前生成议程ID方便界面编辑。
 	 * key为登陆用户的sessionId+”-”+agendas, value为List<Agenda>。
 	 * 
 	 * @author yubing
 	 * @param request
 	 * @param response
-	 */
+	 *//*
 	@RequestMapping(value = "/addAgendaForCache", method = RequestMethod.POST)
 	public void addAgendaForCache(HttpServletRequest request, HttpServletResponse response){
 		ResponseEntity resEntity = new ResponseEntity();
@@ -64,13 +63,13 @@ public class AgendaController extends BaseController{
 		this.renderJson(response, this.buildDefaultSuccessRespone());
 	}
 	
-	/**
+	*//**
 	 * 根据sessionId从radis缓存中获取所有议程
 	 * 
 	 * @author yubing
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
 	@RequestMapping(value = "/getAgendasFromCache", method = RequestMethod.POST)
 	public void getAgendasFromCache(){
 		ResponseEntity resEntity = new ResponseEntity();
@@ -178,3 +177,4 @@ public class AgendaController extends BaseController{
 		this.renderJson(response, this.toJsonString(resEntity));
 	}
 }
+*/

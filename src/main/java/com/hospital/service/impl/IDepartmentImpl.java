@@ -1,4 +1,4 @@
-package com.hospital.service.impl;
+/*package com.hospital.service.impl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -95,7 +95,7 @@ public class IDepartmentImpl implements IDepartmentService {
 		return list;
 	}
 	
-	/**
+	*//**
 	 * 检查导入的表是否符合格式规范
 	 * 
 	 * @param sheet
@@ -108,7 +108,7 @@ public class IDepartmentImpl implements IDepartmentService {
 	 * @param rows
 	 * @param cells
 	 * @return
-	 */
+	 *//*
 	private List<String> checkSheetColumn(Sheet sheet,
 			HashMap<String, CellRangeAddress> mergeCellMap, long parentId,
 			int begin_Column, int end_Column, int begin_row, int end_row,
@@ -157,9 +157,9 @@ public class IDepartmentImpl implements IDepartmentService {
 				cell_beginRow = mergeCell.getFirstRow();
 				cell_endRow = mergeCell.getLastRow();
 			}
-			/**
+			*//**
 			 * 数据库操作 查询判断是否存在 ，否则则插入数据
-			 */
+			 *//*
 			long currId = index++;
 			System.out.println("插入一条数据:父Id:" + parentId + ";单元格值为:" + name
 					+ ";自身ID:" + currId);
@@ -172,7 +172,7 @@ public class IDepartmentImpl implements IDepartmentService {
 		return result;
 	}
 
-	/**
+	*//**
 	 * 检查导入内容是否符合内容规范
 	 * 
 	 * @param sheet
@@ -185,7 +185,7 @@ public class IDepartmentImpl implements IDepartmentService {
 	 * @param rows
 	 * @param cells
 	 * @return
-	 */
+	 *//*
 	private List<String> checkSheetColumnValue(Sheet sheet,
 			HashMap<String, CellRangeAddress> mergeCellMap, long parentId,
 			int begin_Column, int end_Column, int begin_row, int end_row,
@@ -226,9 +226,9 @@ public class IDepartmentImpl implements IDepartmentService {
 				cell_beginRow = mergeCell.getFirstRow();
 				cell_endRow = mergeCell.getLastRow();
 			}
-			/**
+			*//**
 			 * 数据库操作 查询判断是否存在 ，否则则插入数据
-			 */
+			 *//*
 			long currId = index++;
 			System.out.println("插入一条数据:父Id:" + parentId + ";单元格值为:" + name
 					+ ";自身ID:" + currId);
@@ -240,7 +240,7 @@ public class IDepartmentImpl implements IDepartmentService {
 		}
 		return result;
 	}
-	/**
+	*//**
 	 * 
 	 * @param sheet
 	 * @param mergeCellMap
@@ -252,7 +252,7 @@ public class IDepartmentImpl implements IDepartmentService {
 	 * @param rows
 	 * @param cells
 	 * @return
-	 */
+	 *//*
 	private List<String> insertColumn(Sheet sheet,
 			HashMap<String, CellRangeAddress> mergeCellMap, long orgId, long parentId,
 			int begin_Column, int end_Column, int begin_row, int end_row,
@@ -326,14 +326,14 @@ public class IDepartmentImpl implements IDepartmentService {
 		}
 		return rangeAddress;
 	}
-	/**
+	*//**
 	 * 创建部门信息
 	 * 
 	 * @param parentId
 	 * @param orgId
 	 * @param name
 	 * @return
-	 */
+	 *//*
 	private int createDepartment(long orgId, long departId, String name) {
 		int result = 200;
 		try {
@@ -345,14 +345,14 @@ public class IDepartmentImpl implements IDepartmentService {
 		return result;
 	}
 
-	/**
+	*//**
 	 * 新增部门关系数据
 	 * 
 	 * @param departId
 	 * @param parentId
 	 * @param orgId
 	 * @return
-	 */
+	 *//*
 	private int createDepartmentTree(long departId, long parentId, long orgId) {
 		int result = 200;
 		try {
@@ -363,12 +363,12 @@ public class IDepartmentImpl implements IDepartmentService {
 		}
 		return result;
 	}
-    /**
+    *//**
      * 构建企业通讯录树结构内容
      * @param orgId
      * @param departId
      * @return
-     */
+     *//*
 	private List<TreeStructure> getTreeStructureList(long orgId,long departId){
 		List<TreeStructure> list = new ArrayList<TreeStructure>();
 		try {
@@ -433,7 +433,7 @@ public class IDepartmentImpl implements IDepartmentService {
 	
 	
 
-/*	*//**
+	*//**
 	 * 判断是否创建部门
 	 * 
 	 * @param orgId
@@ -467,17 +467,17 @@ public class IDepartmentImpl implements IDepartmentService {
 			message = "内部异常,请稍后再试!";
 		}
 		return message;
-	}*/
+	}
 
-	/**
+	*//**
 	 * 判断父节点部门状态
 	 * 
 	 * @param parentId
 	 * @param orgId
 	 * @param name
 	 * @return
-	 */
-	/*
+	 *//*
+	
 	 * private int isParentNodeExist(long parentId, long orgId, String name) {
 	 * int result = 0; try { int parentNodeExist = departmentDao
 	 * .getDepartmentParentNodeExistByName(parentId, orgId, name); if
@@ -486,9 +486,9 @@ public class IDepartmentImpl implements IDepartmentService {
 	 * (parentNodeExist > 0) { // 部门父节点数据异常,需提示用户去删除多个同名父节点 result = 506; } }
 	 * catch (Exception e) { e.printStackTrace(); result = 500; } return result;
 	 * }
-	 */
+	 
 
-	/**
+	*//**
 	 * 判断部门状态
 	 * 
 	 * @param orgId
@@ -516,5 +516,6 @@ public class IDepartmentImpl implements IDepartmentService {
 			result = 500;
 		}
 		return result;
-	}*/
+	}
 }
+*/

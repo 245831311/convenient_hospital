@@ -1,4 +1,4 @@
-package com.hospital.service.impl;
+/*package com.hospital.service.impl;
 
 
 import java.util.Calendar;
@@ -17,12 +17,12 @@ import com.hospital.dao.ResourceAllocDao;
 import com.hospital.model.Organization;
 import com.hospital.model.ResourceAlloc;
 import com.hospital.service.IResourceAllocService;
-/**
+*//**
  * 资源分配服务接口实现类
  * 
  * @author yubing
  *
- */
+ *//*
 @Service("resourceService")
 public class ResourceAllocServiceImpl implements IResourceAllocService{
 	private Logger logger = Logger.getLogger(this.getClass());
@@ -40,13 +40,13 @@ public class ResourceAllocServiceImpl implements IResourceAllocService{
 		return resourceAllocDao.getResourcesByTimeSection(orgId, dateTime, timeSection);
 	}
 
-	/**
+	*//**
 	 * 算法，按照1天分为48个时间段。
 	 * 例如：0~0.5处于时间段1,0~1处于时间段1,2.
 	 * 0.2~1.2 处于时间段1,2,3
 	 * 
 	 * @author yubing
-	 */
+	 *//*
 	@Override
 	public ResourceAlloc getMaxResourcesByTimeScope(long dateTime, double realLong) throws Exception {
 		Organization organization = 
@@ -72,3 +72,4 @@ public class ResourceAllocServiceImpl implements IResourceAllocService{
 		return resourceAllocDao.getMaxResourcesByTimeScope(orgId, dateTime, startColumn, endColumn);
 	}
 }
+*/

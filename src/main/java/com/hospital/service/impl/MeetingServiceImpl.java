@@ -1,4 +1,4 @@
-package com.hospital.service.impl;
+/*package com.hospital.service.impl;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -44,12 +44,12 @@ import com.hospital.util.IdWorkerUtil;
 import com.hospital.util.RedisUtil;
 import com.hospital.util.ResourcesUtil;
 import com.hospital.util.SerializableUtils;
-/**
+*//**
  * 会议服务接口实现类
  * 
  * @author yubing
  *
- */
+ *//*
 @Service("meetingService")
 public class MeetingServiceImpl implements IMeetingService{
 	private Logger logger = Logger.getLogger(this.getClass());
@@ -96,7 +96,7 @@ public class MeetingServiceImpl implements IMeetingService{
 		return meetingDao.addImmediateMeeting(params);
 	}
 
-	/**
+	*//**
 	 * 1、预分配可用资源时间段，若请求时间段内资源不可用，则显示所有不可用时间段置灰
 	 * 2、更新redis中预留参会人员
 	 * 3、组装数据结构请求会管系统
@@ -105,7 +105,7 @@ public class MeetingServiceImpl implements IMeetingService{
 	 * 6、TODO 事务控制，要求发起会议在同一事务内完成，否则一起回滚。
 	 *
 	 *@author yubing
-	 */
+	 *//*
 	@Override
 	public void startMeeting(Integer sponsorType, Integer mediaType, 
 			String subject, double realLong) throws Exception {
@@ -162,7 +162,7 @@ public class MeetingServiceImpl implements IMeetingService{
 		}
 	}
 
-	/**
+	*//**
 	 * 持久化会议数据
 	 * 1、更新会议表华为会议编号和主持人密码，持久化会议
 	 * 2、持久化会议议程
@@ -176,7 +176,7 @@ public class MeetingServiceImpl implements IMeetingService{
 	 * @param mediaType
 	 * @param subject
 	 * @param realLong
-	 */
+	 *//*
 	private void persistenceData(List<Participant> participants, Conference entity, 
 			Integer sponsorType, Integer mediaType, String subject, double realLong) throws Exception{
 		//1、更新会议表华为会议编号和主持人密码，持久化会议。数据暂未返回
@@ -213,14 +213,14 @@ public class MeetingServiceImpl implements IMeetingService{
 		uploadService.saveUploadLog(upload);
 	}
 
-	/**
+	*//**
 	 * 清空redis会议缓存
 	 * 1、删除议会者列表
 	 * 2、删除会议议程
 	 * 3、删除会议材料
 	 * 
 	 * @author yubing
-	 */
+	 *//*
 	private void delMeetingRedisKey() throws Exception{
 		String participants = ResourcesUtil.getRedisKey(request, AppConstants.REDIS_PARTICIPANTS);
 		String agendas = ResourcesUtil.getRedisKey(request, AppConstants.REDIS_AGENDAS);
@@ -230,7 +230,7 @@ public class MeetingServiceImpl implements IMeetingService{
 		RedisUtil.del(uploadMeetingFileLog);
 	}
 
-	/**
+	*//**
 	 * 组装数据结构请求会管系统
 	 * 
 	 * @author yubing
@@ -241,7 +241,7 @@ public class MeetingServiceImpl implements IMeetingService{
 	 * @param subject 会议主题
 	 * @param relaLong 实际会议时长
 	 * @return
-	 */
+	 *//*
 	private Conference buildConferenceInfo(List<Participant> participants, List<ResourceMap> canUseResources, Integer sponsorType, Integer mediaType,
 			String subject, double relaLong) throws Exception{
 		Conference entity = new Conference();
@@ -301,7 +301,7 @@ public class MeetingServiceImpl implements IMeetingService{
 		return entity;
 	}
 
-	/**
+	*//**
 	 * 更新redis中预留参会人员
 	 * 1、预留参会人员基数为1.1， Math.ceil(参会人数*1.1)-参会人数 = 预留参会人数
 	 * 2、创建预留参会人员。
@@ -311,7 +311,7 @@ public class MeetingServiceImpl implements IMeetingService{
 	 * @author yubing
 	 * @param canUseResources
 	 * @param participants
-	 */
+	 *//*
 	private void updatePrepareParticipants(List<ResourceMap> canUseResources,
 			List<Participant> participants) throws Exception{
 		List<String> list = new ArrayList<>();
@@ -368,7 +368,7 @@ public class MeetingServiceImpl implements IMeetingService{
 		}
 	}
 
-	/**
+	*//**
 	 * 预分配可用资源时间段
 	 * 
 	 * 1、根据时间区间获取资源分配
@@ -381,7 +381,7 @@ public class MeetingServiceImpl implements IMeetingService{
 	 * @param realLong
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
 	private List<ResourceMap> prepareResources(double realLong, int requiredCount) throws Exception {
 		List<ResourceMap> preResources = new ArrayList<>();
 		
@@ -433,3 +433,4 @@ public class MeetingServiceImpl implements IMeetingService{
 		return preResources;
 	}
 }
+*/

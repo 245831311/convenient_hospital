@@ -1,0 +1,44 @@
+body{
+		margin:0px;
+		padding:0px;
+	}
+	.teacher_logo{
+		text-align:center;
+	}
+	.container{
+		height:500px;	
+	}
+	.clearfix{
+		clear:both;
+	}
+	h2{
+		text-align:left;
+		margin-left:50px;	
+		font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;	
+	}
+	li img{
+		width: 132px;
+		height: 165px;	
+		border:none;
+	}
+	ul{
+		list-style:none;
+		line-height:20px;
+	
+	}
+	a{
+		text-decoration:none;	
+	}
+	a:hover{
+		color: #09ac67;	
+	}
+	li:hover{
+		outline: 1px solid #cdcdcd;
+	}
+	li .left{
+		float:left;	
+	}
+	li .right{
+		margin-left:150px;
+		height:165px;	
+	}

@@ -1,13 +1,13 @@
-package com.hospital.service;
+/*package com.hospital.service;
 
-/**
+*//**
  * 会议服务接口
  * 
  * @author yubing
  *
- */
+ *//*
 public interface IMeetingService {
-	/**
+	*//**
 	 * 新增会议
 	 * 
 	 * @author yubing
@@ -18,11 +18,11 @@ public interface IMeetingService {
 	 * @param relaLong 实际会议时长
 	 * @param code 华为会议编码
 	 * @throws Exception
-	 */
+	 *//*
 	public String addMeeting(Integer sponsorType, Integer mediaType, 
 			String subject, double relaLong , String code, String sponPwd) throws Exception;
 	
-	/**
+	*//**
 	 * 发起会议
 	 * 
 	 * @author yubing
@@ -32,8 +32,9 @@ public interface IMeetingService {
 	 * @param relaLong
 	 * @param code
 	 * @throws Exception
-	 */
+	 *//*
 	public void startMeeting(Integer sponsorType, Integer mediaType, 
 			String subject, double realLong) throws Exception;
 	
 }
+*/

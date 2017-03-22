@@ -1,4 +1,4 @@
-package com.hospital.service.impl;
+/*package com.hospital.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,12 +18,12 @@ import com.hospital.util.IdWorkerUtil;
 import com.hospital.util.RedisUtil;
 import com.hospital.util.ResourcesUtil;
 import com.hospital.util.SerializableUtils;
-/**
+*//**
  * 用户登陆日志服务实现类
  * 
  * @author yubing
  *
- */
+ *//*
 @Service("agendaService")
 public class AgendaServiceImpl implements IAgendaService{
 	@Resource(name="agendaDao")
@@ -191,3 +191,4 @@ public class AgendaServiceImpl implements IAgendaService{
 		return agendaDao.batchInsertAgendas(agendas);
 	}
 }
+*/

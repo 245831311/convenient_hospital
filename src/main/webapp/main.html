@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="content-language" content="zh_CN" />
+		<meta http-equiv="content-style-type" content="text/css" />
+		<meta http-equiv="content-script-type" content="text/javascript" />
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1" />
+		<meta name="robots" content="index,follow,noodp,noydir" />
+		<meta name="Keywords" content="智能客服机器人,在线客服系统,呼叫中心系统,客服工单系统,客服SDK,手机客服,微信客服,客服软件" />
+		<meta name="Description" content="佳信客服是全球首创的新一代智能全媒体客服平台,支持一站式多渠道管理,可通过呼叫中心、在线客服、移动网站、微信、微博、移动APP等接入客服,首家推行“人机一体”全客服平台。" />
+		<meta name="copyright" content="" />
+		<meta name="renderer" content="webkit">
+		<meta name="author" content="佳信－全媒体客服专家">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<!-- <meta http-equiv="X-UA-Compatible" content="IE=8" > -->
+		<title>便捷医疗系统</title>
+		<link rel="shortcut icon" type="image/x-icon" href="img/icon.png" media="screen" />
+		<link rel="canonical" href="" />
+		<link href="./css/convenient_hospital.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+		
+		<!--弹层组件js begin -->
+		<script src="//jxcdn.jiaxincloud.com/plugins/layer/layer.js"></script>
+		<!-- 工具类 -->
+		<script type="text/javascript" src="./js/hospitalUtil.js.js"></script>
+		<!--弹层组件 js end -->
+		<script type="text/javascript" src="./js/zc_raise.js"></script>
+		<script type="text/javascript" src="./js/hospital.js"></script>
+	</head>
+	
+	<body>
+		<!-- 移动nav -->
+		<div class="jiaxin-none-html">
+			<div class="jx_top jx_top_sy">
+				<a href="javascript:refreshIndex()">
+					<div class="jx_top_logo jx_top_logo-index"></div>
+				</a>
+				<div class="jx_top_nav">
+					<ul>
+						<li class="jx_top_nav_xz"><a href="">首页</a>
+							<font></font>
+						</li>
+						<li ><a href="systemDesc.html">平台简介</a>
+							<font></font>
+						</li>
+						<li><a href="consultation.jsp">医生咨询</a>
+							<font></font>
+						</li>
+						<li><a href="contactUs.html">关于我们</a>
+							<font></font>
+						</li>
+						<li id="myCenter"><a href="myCenter.html">个人中心</a>
+						</li>
+						<li class="jxnr_top_icon j_icon_1" style="border-right: 0;"><a onclick="locationToRegister()"><span class="jxnr-span">注册</span></a></li>
+					<li class="jxnr_top_icon j_icon_2" id="jxnr_top_icon"style="border-right:0;">
+						<span class="jxnr-span"><a href="javascript:locationToLogin()">登录</a></span>
+					</li>
+					</ul>
+				</div>
+			</div>
+			<div class="jx_vdieoIE8" style="display: none;">
+				<div class="jx_vdieo_nr">
+					<div class="jx_vdieo_gb" id="closeVideo"><span>X</span></div>
+					<div id="jx_vdieo_nr"></div>
+					<!-- <object id="jx_vdieoIE8Play"classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"  codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="890" height="500">
+					<param name="movie" value="Flvplayer.swf">					
+					<param name="quality" value="high">					
+					<param name="allowFullScreen" value="true" />	
+					<param name="loop" value="true">
+					<param name="FlashVars" value="vcastr_file=http://jxcdn.jiaxincloud.com/jiaxin-introduce.flv&IsAutoPlay=1" />					
+					<embed src="Flvplayer.swf" allowFullScreen="true" loop="true" FlashVars="vcastr_file=http://jxcdn.jiaxincloud.com/jiaxin-introduce.flv&IsAutoPlay=0" quality="high"  pluginspage="http://www.macromedia.com/go/getflashplayer"  type="application/x-shockwave-flash" autostart="true" width="890" height="500"></embed>					
+				</object> -->
+				</div>
+			</div>
+			<!-- 视频播放开始  end-->
+			<div class="main_visual jx_lb_pc">
+				<!--
+				<div class="flicking_con">
+					<div class="flicking_inner">
+						<a>1</a>
+						<a>2</a>
+					</div>
+				</div>-->
+				<div class="main_image jx_lb_height">
+					<div>
+						<li class="jx_lb_height">
+							<span class="img_3 jx_lb_height"></span>
+							<div class="jx_topbj_1" title="为您提供一个更便捷，更效率的医疗平台。。。">
+								<div class="jx_topbj_wz">
+									<P class="jx_topbj_01"></P>
+								</div>
+							</div>
+						</li>
+						<!--<li class="jx_lb_height"><a href="http://city.oschina.net/guangzhou/event/2179887" target="_blank"><span class="img_4 jx_lb_height"></span></a></li>-->
+					</div>
+					<!--
+                    <a id="btn_prev" href="javascript:;"></a>
+					<a id="btn_next" href="javascript:;"></a>
+					-->
+				</div>
+			</div>
+
+			<!--描述：手机端轮播-->
+			<div class="main_visual jx_lb_phone">
+				<div class="flicking_con">
+					<div class="flicking_inner">
+						<a>1</a>
+						<a>2</a>
+					</div>
+				</div>
+				<div class="main_image">
+					<div>
+						<li>
+							<span class="img_3"><img src="img/01.png" /></span>
+							<div class="jxyd_toplb">
+								<P class="jx_topbj_01"><img src="img/03.png"></P>
+
+							</div>
+						</li>
+					</div>
+				</div>
+			</div>
+
+			<div class="jx_lb">
+				<div class="jx_lb_01"></div>
+				<div class="jx_lb_02"></div>
+				<div class="jx_lb_02"></div>
+			</div>
+			<div class="jx_lb_mk">
+				<!-- <div class="jx_lb_mk_nr">
+					<div class="jx_lb_mkbt">
+						<P class="jx_lb_mkbt_01">四位一体客服</P>
+						<P class="jx_lb_mkbt_02"><img src="img/05.png"></P>
+						<P class="jx_lb_mkbt_03">以开放API及SDK的方式向开发者提供全渠道的客服</P>
+					</div>
+				</div> -->
+				<div class="jx_lb_swyt">
+					<div class="jx_lb_swyt_01 jx-td-animate">
+						<a href="agent.html">
+						<div class="jx_lb_swytnr_01">在线挂号</div>
+						<div class="jx_lb_swytnr_02">Register online</div>
+						<div class="jx_lb_swytnr_03">
+							<p>能让你进行快速挂号</p>
+						</div>
+						</a>
+					</div>
+
+					<div class="jx_lb_swyt_02 jx-td-animate">
+						<a href="order.html">
+						<div class="jx_lb_swytnr_01">快速查询报告</div>
+						<div class="jx_lb_swytnr_02">The repair order</div>
+						<div class="jx_lb_swytnr_03">快速创建</div>
+						<div class="jx_lb_swytnr_03">自定义字段</div>
+						<div class="jx_lb_swytnr_03">多种派单规则</div>
+						</a>
+					</div>
+					<div class="jx_lb_swyt_03 jx-td-animate">
+						<a href="callCenter.html">
+						<div class="jx_lb_swytnr_01">在线咨询</div>
+						<div class="jx_lb_swytnr_02">Consultation online</div>
+						<div class="jx_lb_swytnr_03">
+							<p>能让你获取更好的帮助</p>				
+						</div>
+						</a>
+					</div>
+					<!-- <div class="jx_lb_swyt_04 jx-td-animate">
+						<a href="customer.html">
+						<div class="jx_lb_swytnr_01">机器人客服</div>
+						<div class="jx_lb_swytnr_02">Customer service robot</div>
+						<div class="jx_lb_swytnr_03">多任务处理</div>
+						<div class="jx_lb_swytnr_03">快速回复</div>
+						<div class="jx_lb_swytnr_03">拟人化语气</div>
+						</a>
+					</div> -->
+
+				</div>
+			</div>
+		</div>
+        <script type="text/javascript">
+			window.jQuery || document.write("<script src='./plugins/assets/js/jquery-2.0.3.min.js'>" + "<" + "script>");
+		</script>
+
+		<!-- <![endif]-->
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='./js/jquery.js'>"+"<"+"/script>");
+		</script>
+		
+		<script type="text/javascript">
+		(function(ji, a, x, i, n, j, s) {
+		    ji[n] = ji[n] || function() {
+		      (ji[n].n = ji[n].n || []).push(arguments);
+		    };
+		    v = new Date().getUTCDate();
+		    j = a.createElement(x), s = a.getElementsByTagName(x)[0];
+		    j.async = true;
+		    j.charset = "UTF-8";
+		    j.src = i + "?v=" + v + "&id=bhn6dhgzbwm4ma&appName=asd589&appChannel=20002";
+		    s.parentNode.insertBefore(j, s);
+		})(window, document, "script", "//web.jiaxincloud.com/mcs.js", "_JIAXIN");_JIAXIN();
+		</script>
+	</body>
+</html>

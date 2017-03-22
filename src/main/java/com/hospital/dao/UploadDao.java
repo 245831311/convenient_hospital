@@ -1,4 +1,4 @@
-package com.hospital.dao;
+/*package com.hospital.dao;
 
 import org.springframework.stereotype.Repository;
 
@@ -8,11 +8,11 @@ import com.hospital.common.ServiceException;
 import com.hospital.model.Upload;
 import com.hospital.util.IdWorkerUtil;
 
-/**
+*//**
  * 会议材料上传日志DAO
  * @author yubing
  *
- */
+ *//*
 @Repository("uploadDao")
 public class UploadDao extends MybatisBaseDao<Object,String>{
 	public boolean addUploadLog(String fileName, String fileType,
@@ -45,3 +45,4 @@ public class UploadDao extends MybatisBaseDao<Object,String>{
 		return true;
 	}
 }
+*/

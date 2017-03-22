@@ -1,4 +1,4 @@
-package com.hospital.action;
+/*package com.hospital.action;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,11 +16,11 @@ import com.hospital.common.Code;
 import com.hospital.common.ResponseEntity;
 import com.hospital.model.Participant;
 import com.hospital.service.IParticipantService;
-/**
+*//**
  * 参会人员控制器
  * @author yubing
  *
- */
+ *//*
 @Controller
 @RequestMapping("/participantController")
 public class ParticipantController extends BaseController{
@@ -28,13 +28,13 @@ public class ParticipantController extends BaseController{
 	@Resource(name="participantService")
 	private IParticipantService participantService;
 	
-	/**
+	*//**
 	 * 根据sessionId从radis缓存中获取所有参会人员
 	 * 
 	 * @author yubing
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
 	@RequestMapping(value = "/getParticipantsFromCache", method = RequestMethod.POST)
 	public void getParticipantsFromCache(){
 		ResponseEntity resEntity = new ResponseEntity();
@@ -122,3 +122,4 @@ public class ParticipantController extends BaseController{
 		this.renderJson(response, this.toJsonString(resEntity));
 	}
 }
+*/

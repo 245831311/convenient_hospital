@@ -1,4 +1,4 @@
-package com.hospital.dao;
+/*package com.hospital.dao;
 
 import org.springframework.stereotype.Repository;
 
@@ -9,11 +9,11 @@ import com.hospital.model.LoginLog;
 import com.hospital.util.AddressUtil;
 import com.hospital.util.IdWorkerUtil;
 
-/**
+*//**
  * 用户登陆日志DAO
  * @author yubing
  *
- */
+ *//*
 @Repository("loginLogDao")
 public class LoginLogDao extends MybatisBaseDao<Object,String>{
 	public boolean addLoginLog(String userId, String loginIp) throws ServiceException{
@@ -34,3 +34,4 @@ public class LoginLogDao extends MybatisBaseDao<Object,String>{
 		return true;
 	}
 }
+*/

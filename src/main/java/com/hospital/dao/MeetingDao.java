@@ -1,4 +1,4 @@
-package com.hospital.dao;
+/*package com.hospital.dao;
 
 import java.util.Map;
 
@@ -9,14 +9,14 @@ import com.hospital.common.MybatisBaseDao;
 import com.hospital.common.ServiceException;
 import com.hospital.util.IdWorkerUtil;
 
-/**
+*//**
  * 会议DAO
  * @author yubing
  * 
- */
+ *//*
 @Repository("meetingDao")
 public class MeetingDao extends MybatisBaseDao<Object,String>{
-	/**
+	*//**
 	 * 发起即时会议
 	 * 
 	 * @author yubing
@@ -26,7 +26,7 @@ public class MeetingDao extends MybatisBaseDao<Object,String>{
 	 * @param relaLong
 	 * @return
 	 * @throws ServiceException
-	 */
+	 *//*
 	public String addImmediateMeeting(Map<String,Object> params) throws ServiceException{
 		long id = IdWorkerUtil.nextId();
 		try {
@@ -40,3 +40,4 @@ public class MeetingDao extends MybatisBaseDao<Object,String>{
 	}
 	
 }
+*/

@@ -1,0 +1,93 @@
+body{
+		margin:0px;
+    	padding:0px;
+	}
+	#header{
+		height:30px;
+	}
+	.logo{
+		float:left;
+		margin-left:8px;
+		margin-top:5px;
+		font-size:20px;
+		font-family:"Comic Sans MS", cursive;
+	}
+	.r_help{
+		float:right;	
+		margin-top:-7px;
+	}
+	.r_help ul li{
+		display:inline;
+		list-style:none;
+	}
+	.r_help ul li a{
+		text-decoration:none;
+		color:#03F;
+		font-size:13px;
+	}
+	.r_help ul li a:hover{
+		text-decoration:none;
+		color:#96F;
+	}
+	.clear{
+		clear:both;	
+	}
+	.logo_img{
+		border:1px;
+		margin-top:-20px;
+		text-align:center;
+	}
+	#middle{
+		height:600px;
+
+	}
+	.r_remind{
+		text-align:center;	
+	}
+	.login_btn{
+		width:50px;
+		color:#F63;
+	}
+	.r_signin{
+		margin-top:20px;	
+		margin-left:10px;
+	}
+	.r_login{
+		
+	}
+	.r-sign{
+		position:absolute;
+		margin-top:5px;
+		color:#F93;
+	}
+	.field{
+		text-align:center;
+		margin-bottom:15px;
+		
+	}
+	.star{
+		color:#F00;
+	}
+	.r{
+		margin-bottom:20px;
+	}
+	.r_input input{
+		width:150px;
+	}
+	.btn{
+		margin-top:40px;
+		margin-left:500px;
+	}
+	.btn div{
+
+		text-align:center;
+	}
+	.btn input{
+		width:120px;
+		float:left;
+		margin-right:20px;
+
+	}
+	.clear{
+		clear:both;	
+	}

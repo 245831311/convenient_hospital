@@ -1,7 +1,9 @@
 package com.hospital.service.impl;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -13,8 +15,6 @@ import org.springframework.stereotype.Service;
 
 import com.hospital.common.ServiceException;
 import com.hospital.constants.AppConstants;
-import com.hospital.dao.LoginLogDao;
-import com.hospital.dao.OrganizationDao;
 import com.hospital.dao.UserDao;
 import com.hospital.model.User;
 import com.hospital.service.IUserService;
@@ -33,7 +33,9 @@ public class UserServiceImpl implements IUserService{
 	private UserDao userDao;
 	
 	@Override
-	public String login(String username, String password, String code) throws ServiceException {
+	public Map<String,Object> login(String username, String password, String code) throws ServiceException {
+		Map<String,Object> map = new HashMap<String,Object>();
+		boolean result = true;
 		String msg = "";
 		String validateCode = "";
 		Object codeStr = request.getSession().getAttribute("validateCode");
@@ -48,6 +50,7 @@ public class UserServiceImpl implements IUserService{
 		User user = this.getUserByUserName(username);
 		if(user==null){
 			msg = "用户名不存在!";
+			result = false;
 		}
 		
 		if(logger.isDebugEnabled()){
@@ -59,6 +62,7 @@ public class UserServiceImpl implements IUserService{
 		}
 		if(!user.getPassword().equals(password)){
 			msg = "密码错误!";
+			result = false;
 		}
 		
 		//3、验证验证码
@@ -67,12 +71,15 @@ public class UserServiceImpl implements IUserService{
 		}
 		if(StringUtils.isNotBlank(validateCode) && !code.equals(validateCode)){
 			msg = "验证码错误!";
+			result = false;
 		}
 		
 		//4、保存当前用户到session
 		request.getSession().setAttribute(AppConstants.SESSION_USER, user);
 		msg = "登陆成功!";
-		return msg;
+		map.put("result", result);
+		map.put("message", msg);
+		return map;
 	}
 	
 	@Override
@@ -92,8 +99,25 @@ public class UserServiceImpl implements IUserService{
 		} catch (Exception e) {
 			logger.error("[Service.UserServiceImpl] getUsersByUserIds excepiton!",e);
 		}
-		
 		return list;
+	}
+
+	@Override
+	public Map<String, Object> register(String username, String password) throws ServiceException {
+		Map<String,Object> map = new HashMap<String,Object>();
+		boolean result = true;
+		String msg = "";
+		User user = this.getUserByUserName(username);
+		
+		if(user != null){
+			msg = "用户名已存在!";
+			result = false;
+		}else{
+			password = new String(Crypto43DES.encrypt(password.getBytes()));
+		}
+		
+		
+		return null;
 	}
 	
 }

@@ -1,4 +1,4 @@
-package com.hospital.service.impl;
+/*package com.hospital.service.impl;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,12 +28,12 @@ import com.hospital.util.IdWorkerUtil;
 import com.hospital.util.RedisUtil;
 import com.hospital.util.ResourcesUtil;
 import com.hospital.util.SerializableUtils;
-/**
+*//**
  * 会议材料上传日志服务实现类
  * 
  * @author yubing
  *
- */
+ *//*
 @Service("uploadService")
 public class UploadServiceImpl implements IUploadService{
 	@Resource(name="uploadDao")
@@ -143,3 +143,4 @@ public class UploadServiceImpl implements IUploadService{
 	}
 
 }
+*/

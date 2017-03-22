@@ -1,0 +1,112 @@
+	body{
+		background:#fff;
+		font-family: 'Lato', sans-serif;
+		padding:0px;
+		text-align:center;
+	}
+	.logo{	
+		color:#D1A630;
+		text-align:left;
+		padding-top:7px;
+		font-family:"Comic Sans MS", cursive;
+	}
+	.login{
+		background:url(../image/login1.jpg);
+		margin-top:50px;
+		height:526px;
+		width:1024px;
+		margin-left:150px;
+	}
+	.input-label{
+		position: absolute;
+		line-height: 27px;
+		height: 20px;
+		color: #999;
+		opacity: 1;
+		transition: all .2s ease-out;
+		-webkit-transition: all .2s ease-in;
+		-moz-transition: all .2s ease-out;
+		font-size:12px;
+		padding-left:5px;
+	}
+	.loginBox{
+		margin-top:130px;
+	}
+	.username-field{
+		margin-right:235px;
+		margin-bottom:25px;
+	}
+	.password-field{
+		margin-right:-350px;
+	}
+	.field{
+		width: 159.5px;
+		height: 20px;
+		line-height: 23px;
+		border: 1px solid #dedede;
+	}
+	.iconfont{
+	   font-family: iconfont!important;
+	   font-size: 16px;
+	   font-style: normal;
+	   -webkit-font-smoothing: antialiased;
+	   -webkit-text-stroke-width: .2px;
+	}
+	.password-field{
+		margin-right:235px;
+		margin-bottom:25px;
+	}
+	.ss{
+		height:22px;
+		width:22px;
+		color:#CCC;
+		float:left;
+		margin-left:565px;
+	}
+	.u-label{
+		margin-left:20px;
+		
+	}
+	.forget{
+		float:left;
+		margin-left:585px;
+		font-size:14px;
+	}
+	.forgetAndSign a{
+		color:#999;
+		text-decoration:none;
+	}
+	.forgetAndSign a:hover{
+		color:#F60;
+		text-decoration:underline;
+	}
+	.sign{
+		float:right;
+		margin-right:255px;
+		margin-bottom:13px;
+		font-size:14px;
+	}
+	.clear 
+	{ 
+		clear: both; 
+	} 
+	.loginBtn input{
+	  width: 184px;
+	  height: 30px;
+	  line-height: 20px;
+	  margin-left:335px;
+	  background:url(../image/btn.jpg);
+	  border:0;
+	}
+	.message{
+		width: 250px;
+		margin-left: 540px;
+		margin-top: 30px;
+		position: absolute;
+		left: 192px;
+		top: 181px;
+		height: 38px;
+		text-align: left;
+		font-size: 16px;
+		color:#999;
+	}

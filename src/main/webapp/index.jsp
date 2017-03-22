@@ -1,4 +1,4 @@
-<%@page import="com.bkybk.model.User"%>
+<%@page import="com.hospital.model.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
 <%-- <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt"  prefix="fmt"%> --%>
@@ -8,7 +8,7 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>云视讯平台</title>
+		<title>便捷医疗后台</title>
 		
 		<link href="${baseurl }/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" />
 		<link href="${baseurl }/plugins/assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -122,45 +122,49 @@
 				</script>
 				<p class="leftTop"><i class="fr icon-indent-left"></i><span>工作导航</span></p>
 				<ul class="nav nav-list">
+					<li>
+						<a href="#" class="">
+							<i class="icon-cloud"></i>
+							<span class="menu-text">总览 </span>
 
+						</a>
+						
+					</li>
 					<li>
 						<a href="#" class="dropdown-toggle">
 							<i class="icon-cloud"></i>
-							<span class="menu-text">云会议中心 </span>
+							<span class="menu-text">人员管理 </span>
 
 							<b class="arrow icon-angle-down"></b>
 						</a>
 
 						<ul class="submenu">
 							<li>
-								<a href="javascript:;" id="instantMeeting">
-									 即时会议
+								<a href="javascript:;" id="">
+									 病人管理
 								</a>
 							</li>
 
-							<li>
-								<a href="javascript:;" id="bb">
-									 预约会议
-								</a>
-							</li>
-							<li>
-								<a href="javascript:;" id="bb">
-									会议日程
-								</a>
-							</li>
-							<li>
-								<a href="javascript:;" id="historyRecord">
-									历史会议
-								</a>
-							</li>
-							<li>
-								<a href="javascript:;" id="addressList">
-									企业通讯录
-								</a>
-							</li>
 						</ul>
 					</li>
-						<li>
+					<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-cloud"></i>
+							<span class="menu-text">数据统计 </span>
+
+							<b class="arrow icon-angle-down"></b>
+						</a>
+
+						<ul class="submenu">
+							<li>
+								<a href="javascript:;" id="">
+									 
+								</a>
+							</li>
+
+						</ul>
+					</li>
+					<li>
 						<a href="#" class="dropdown-toggle">
 							<i class="icon-cog"></i>
 							<span class="menu-text">会议管理 </span>
@@ -178,6 +182,16 @@
 							<li>
 								<a href="javascript:;" id="bb">
 									预约会议
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" id="historyRecord">
+									历史会议
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" id="addressList">
+									企业通讯录
 								</a>
 							</li>
 						</ul>

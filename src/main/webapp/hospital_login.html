@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登陆页面</title>
+<link type="text/css" href="./css/hospital_login.css"  rel="stylesheet">
+<script src="../js/login.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		var value = document.getElementById('username-field').value;
+		if(value!="")
+		{
+			var il = document.getElementById('il');
+			il.innerHTML="";
+		}	
+	} 
+
+</script>
+</head>
+
+<body>
+	<div class="container"> 
+    	<div class="login">
+        	<div class="logo">
+            	<h1>OnlineCource在线课程</h1>
+            </div>
+            <div class="message">
+            	
+            </div>
+            <form action="login!login.do" method="post">
+            	<div class="loginBox">
+            	<div class="username-field">
+                 <div class="ss">
+            	   <label for="username-field" class="u-label">
+                  		<i class="iconfont" title="用户名"><img src="../image/username.png" width="22" height="22"/></i>
+                   </label>
+                 </div>
+            	  <span class="input-label"  id="il" onclick="firstfocus()"> 输入用户名</span>
+                    <input type="text" name="user.username" id="username-field" maxlength="32" tabindex="1" class="field" onfocus="firstfocus()" onblur="release()" value="${user.username }"/>
+                </div>
+                <div class="password-field">
+	                <div class="ss">
+	            	   <label for="password-field" class="u-label">
+	                  		<i class="iconfont" title="密码"><img src="../image/password.png" width="22" height="22"/></i>
+	                   </label>
+	                 </div>
+                  	<input type="password" name="user.password" id="password-field" maxlength="32" class="field" tabindex="2" value="${user.password}"/>
+              </div>
+	            <div class="forgetAndSign">
+	              	<div class="forget">
+	                	<a href="#">忘记密码登录</a>
+	                </div>
+	              	<div class="sign">
+	                	<a href="${pageContext.request.contextPath}/user/register.jsp">免费注册</a>
+	                </div>
+	                 <div class="clear"></div>
+	              </div>
+	            <div class="loginBtn">
+	              	<input type="submit" onclick="return check()" value="登&nbsp;&nbsp;&nbsp;陆"/>
+	            </div>
+         	 </div>
+          </form>
+        </div>
+    </div>
+</body>
+</html>

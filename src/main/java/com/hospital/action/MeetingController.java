@@ -1,4 +1,4 @@
-package com.hospital.action;
+/*package com.hospital.action;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -16,11 +16,11 @@ import com.hospital.common.ResponseEntity;
 import com.hospital.common.ServiceException;
 import com.hospital.service.IMeetingService;
 
-/**
+*//**
  * 会议服务控制器
  * @author yubing
  *
- */
+ *//*
 @Controller
 @RequestMapping("/meetingController")
 public class MeetingController extends BaseController{
@@ -42,9 +42,9 @@ public class MeetingController extends BaseController{
 		}
 	}
 	
-	/**
+	*//**
 	 * 发起会议
-	 */
+	 *//*
 	@RequestMapping(value = "/startMeeting", method = RequestMethod.POST)
 	public void startMeeting(){
 		ResponseEntity resEntity = new ResponseEntity();
@@ -71,3 +71,4 @@ public class MeetingController extends BaseController{
 	}
 	
 }
+*/

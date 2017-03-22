@@ -1,4 +1,4 @@
-package com.hospital.dao;
+/*package com.hospital.dao;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,11 +10,11 @@ import com.hospital.common.MybatisBaseDao;
 import com.hospital.common.ServiceException;
 import com.hospital.model.ResourceAlloc;
 
-/**
+*//**
  * 资源分配DAO
  * @author yubing
  *
- */
+ *//*
 @Repository("resourceAllocDao")
 public class ResourceAllocDao extends MybatisBaseDao<Object,String>{
 	public ResourceAlloc getResourcesByTimeSection(long orgId,
@@ -50,3 +50,4 @@ public class ResourceAllocDao extends MybatisBaseDao<Object,String>{
 		return resourceAlloc;
 	}
 }
+*/

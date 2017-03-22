@@ -1,4 +1,4 @@
-package com.hospital.action;
+/*package com.hospital.action;
 
 import java.util.HashMap;
 import java.util.List;
@@ -20,9 +20,9 @@ import com.hospital.model.ParentTree;
 import com.hospital.model.TreeStructure;
 import com.hospital.service.IDepartmentService;
 import com.hospital.service.IUserService;
-/**
+*//**
  * 部门控制器
- */
+ *//*
 @Controller
 @RequestMapping("/departmentController")
 public class DepartmentController extends BaseController{
@@ -30,7 +30,7 @@ public class DepartmentController extends BaseController{
 	@Resource(name="departmentService")
 	private IDepartmentService departmentService;
 	
-	/**
+	*//**
 	 * 导入组织架构
 	 * 1、校验导入文件格式
 	 * 2、校验导入文件内容
@@ -38,7 +38,7 @@ public class DepartmentController extends BaseController{
 	 * @author 
 	 * @param request
 	 * @param response
-	 */
+	 *//*
 	@RequestMapping(value = "/export", method = RequestMethod.POST)
 	public void exportDepartment(){
 		ResponseEntity resEntity = new ResponseEntity();
@@ -80,9 +80,9 @@ public class DepartmentController extends BaseController{
 			String depart_Id = this.getParamStr(request, "departId");
 			//Object org_Id = this.session.getAttribute(AppConstants.SESSION_ORGANIZATION);
 			long orgId = 798069832187641856l;
-			/*if(org_Id!=null){
+			if(org_Id!=null){
 				orgId = Long.parseLong(org_Id+"");
-			}*/
+			}
 			long departId = 0;
 			if(depart_Id!=null){
 				departId = Long.parseLong(depart_Id);
@@ -116,9 +116,9 @@ public class DepartmentController extends BaseController{
 			String mobile = this.getParamStr(request, "mobile");
 			//Object org_Id = this.session.getAttribute(AppConstants.SESSION_ORGANIZATION);
 			long orgId = 798069832187641856l;
-			/*if(org_Id!=null){
+			if(org_Id!=null){
 				orgId = Long.parseLong(org_Id+"");
-			}*/
+			}
 			long departId = 0;
 			String parentDepartIds = "";
 			if(depart_Id!=null){
@@ -147,3 +147,4 @@ public class DepartmentController extends BaseController{
 		this.renderJson(response, JSONObject.toJSONString(resEntity));
 	}
 }
+*/

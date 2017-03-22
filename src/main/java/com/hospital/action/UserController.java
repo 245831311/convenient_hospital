@@ -1,5 +1,7 @@
 package com.hospital.action;
 
+import java.util.Map;
+
 import javax.annotation.Resource;
 
 import org.apache.commons.lang3.StringUtils;
@@ -14,8 +16,6 @@ import com.hospital.common.ResponseEntity;
 import com.hospital.service.IUserService;
 /**
  * 用户控制器
- * @author yubing
- *
  */
 @Controller
 @RequestMapping("/userController")
@@ -32,31 +32,40 @@ public class UserController extends BaseController{
 	 * 4、保存当前用户到session
 	 * 5、记录用户登陆日志
 	 * 
-	 * @author yubing
 	 * @param request
 	 * @param response
 	 */
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public void login(){
-		ResponseEntity resEntity = new ResponseEntity();
-		resEntity.setCode(Code.CODE_SERVER_ERROR);
-		
+		Map<String,Object> result = null;
 		try {
 			String username = this.getParamStr(request, "username");
 			String password = this.getParamStr(request, "password");
 			String code = this.getParamStr(request, "code");
 			
-			String errorMsg = userService.login(username, password, code);
-			if(StringUtils.isNotBlank(errorMsg)){
-				resEntity.setCode(Code.CODE_NOT_ACCEPTABLE);
-				resEntity.setMessage(errorMsg);
-			}else{
-				resEntity.setCode(Code.CODE_OK);
-			}
+			result = userService.login(username, password, code);
 		} catch (Exception e) {
 			logger.error("[Controller.UserController] validateUserName occur exception!",e);
 		}
 		
-		this.renderJson(response, JSONObject.toJSONString(resEntity));
+		this.renderJson(response, JSONObject.toJSONString(result));
 	}
+	
+	
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	public void register(){
+		ResponseEntity resEntity = new ResponseEntity();
+		resEntity.setCode(Code.CODE_SERVER_ERROR);
+		try {
+			String username = this.getParamStr(request, "username");
+			String password = this.getParamStr(request, "password");
+			String code = this.getParamStr(request, "code");
+			
+			Map result = userService.register(username,password);
+		}catch(Exception e){
+			logger.error("[Controller.UserController] register occur exception!",e);
+		}
+		
+	}
+	
 }

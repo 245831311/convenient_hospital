@@ -1,4 +1,4 @@
-package com.hospital.action;
+/*package com.hospital.action;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.hospital.constants.AppConstants;
 import com.hospital.service.IUploadService;
 
-/**
+*//**
  * 用户控制器
  * @author yubing
  *
- */
+ *//*
 @Controller
 @RequestMapping("/uploadController")
 public class UploadController extends BaseController{
@@ -49,13 +49,13 @@ public class UploadController extends BaseController{
 		}
 	}
 	
-	/**
+	*//**
      * 通知页面导入结束
      * 
      * @param writer
      * @param s
      * @param log
-     */
+     *//*
     private void notifyEnd(PrintWriter writer) {
         writer.write("<script type='text/javascript'>");
         writer.write("parent.finishImport();");
@@ -67,3 +67,4 @@ public class UploadController extends BaseController{
         }
     }
 }
+*/

@@ -5,7 +5,7 @@
 <html>
 <head>
 		<meta charset="UTF-8">
-		<title>云视讯登录界面</title>
+		<title>后台登录界面</title>
 		<link href="${baseurl }/css/reset.css" rel="stylesheet" />
 		<link href="${baseurl }/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" />
 		<link href="${baseurl }/plugins/assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -16,12 +16,12 @@
 		<!--头部-->
 		<div class="top">
 			<div class="fr">
-				<p><a href="javascript:">云视讯介绍</a></p>
+				<p><a href="javascript:">便捷医疗系统介绍</a></p>
 				<ul>
-					<li><i class="icon-phone"></i>4001-10086-1</li>
-					<li><i class="icon-envelope"></i>uc@chinamobile.com</li>
+					<li><i class="icon-phone"></i>15766954687</li>
+					<li><i class="icon-envelope"></i>245831311@qq.com</li>
 				</ul>
-			</div><img src="${baseurl }/images/base/loginLogo.png" class="fl" /></div>
+			</div><%-- <img src="${baseurl }/images/base/loginLogo.png" class="fl" /> --%></div>
 		<!--登录部分-->
 		<div class="loginMain">
 			<div class="fl"><img src="${baseurl }/images/base/loginImg.png"></div>

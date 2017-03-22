@@ -1,4 +1,4 @@
-package com.hospital.dao;
+/*package com.hospital.dao;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,14 +18,14 @@ import com.hospital.util.IdWorkerUtil;
 
 @Repository("departmentDao")
 public class DepartmentDao extends MybatisBaseDao<Object, String> {
-	/**
+	*//**
 	 * 根据departId,orgId,name判断部门父节点是否存在
 	 * @param departId 父节点部门Id
 	 * @param orgId 企业Id
 	 * @param name 当前节点名称 (当前部门名称)
 	 * @return
 	 * @throws ServiceException
-	 */
+	 *//*
 	public int getDepartmentParentNodeExistByName(long departId, long orgId, String name)throws ServiceException {
 		int result = 0;
 		try {
@@ -41,13 +41,13 @@ public class DepartmentDao extends MybatisBaseDao<Object, String> {
 		return result;
 	}
 	
-	/**
+	*//**
 	 * 根据部门Id集合查询部门信息
 	 * @param orgId
 	 * @param departIds
 	 * @return
 	 * @throws ServiceException
-	 */
+	 *//*
 	public List<Department> getDepartment(long orgId, String departIds)throws ServiceException {
 		List<Department> list = null;
 		try {
@@ -63,13 +63,13 @@ public class DepartmentDao extends MybatisBaseDao<Object, String> {
 		}
 		return list;
 	}
-	/**
+	*//**
 	 * 根据部门名称拼音缩写查询部门信息
 	 * @param orgId
 	 * @param orgShortName
 	 * @return
 	 * @throws ServiceException
-	 */
+	 *//*
 	public List<Department> getDepartmentByOrgShortName(long orgId, String orgShortName)throws ServiceException {
 		List<Department> list = null;
 		try {
@@ -83,13 +83,13 @@ public class DepartmentDao extends MybatisBaseDao<Object, String> {
 		}
 		return list;
 	}
-	/**
+	*//**
 	 * 根据部门名称查询部门信息
 	 * @param orgId
 	 * @param name
 	 * @return
 	 * @throws ServiceException
-	 */
+	 *//*
 	public List<Department> getDepartmentByName(long orgId, String name)throws ServiceException {
 		List<Department> list = null;
 		try {
@@ -117,13 +117,13 @@ public class DepartmentDao extends MybatisBaseDao<Object, String> {
 		}
 		return list;
 	}
-	/**
+	*//**
 	 * 根据 orgId,userId获取所在部门Id
 	 * @param orgId
 	 * @param userId
 	 * @return
 	 * @throws ServiceException
-	 */
+	 *//*
 	public long getDepartId(long orgId, long userId)throws ServiceException {
 		long departId = 0;
 		try {
@@ -137,13 +137,13 @@ public class DepartmentDao extends MybatisBaseDao<Object, String> {
 		}
 		return departId;
 	}
-	/**
+	*//**
 	 * 获取所有父节点
 	 * @param orgId
 	 * @param departId
 	 * @return
 	 * @throws ServiceException
-	 */
+	 *//*
 	public List<DepartTree> getParentDepartId(long orgId, long departId)throws ServiceException {
 		List<DepartTree> list = null;
 		try {
@@ -157,13 +157,13 @@ public class DepartmentDao extends MybatisBaseDao<Object, String> {
 		}
 		return list;
 	}
-	/**
+	*//**
 	 * 根据部门名称模糊查询部门信息
 	 * @param orgId
 	 * @param name
 	 * @return
 	 * @throws ServiceException
-	 */
+	 *//*
 	public List<Department> getDepartmentLikeName(long orgId, String name)throws ServiceException {
 		List<Department> list = null;
 		try {
@@ -177,13 +177,13 @@ public class DepartmentDao extends MybatisBaseDao<Object, String> {
 		}
 		return list;
 	}
-	/**
+	*//**
 	 * 创建部门
 	 * @param orgId
 	 * @param departId
 	 * @param name
 	 * @throws ServiceException
-	 */
+	 *//*
 	public void createDepartment(long orgId, long departId, String name)throws ServiceException {
 		try {
 			Department depart = new Department();
@@ -204,13 +204,13 @@ public class DepartmentDao extends MybatisBaseDao<Object, String> {
 			throw new ServiceException("DepartmentDao.getDepartmentExistByName occur exception!", e, Code.CODE_SERVER_ERROR, "");
 		}
 	}
-	/**
+	*//**
 	 * 新增部门关系
 	 * @param orgId
 	 * @param parentDepartId
 	 * @param departId
 	 * @throws ServiceException
-	 */
+	 *//*
 	public void createDepartmentTree(long orgId, long parentDepartId, long departId)throws ServiceException {
 		try {
 			DepartTree depart_tree = new DepartTree();
@@ -225,3 +225,4 @@ public class DepartmentDao extends MybatisBaseDao<Object, String> {
 		}
 	}
 }
+*/

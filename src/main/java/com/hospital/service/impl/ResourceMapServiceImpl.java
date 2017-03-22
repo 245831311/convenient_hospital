@@ -1,4 +1,4 @@
-package com.hospital.service.impl;
+/*package com.hospital.service.impl;
 
 import java.util.List;
 
@@ -10,12 +10,12 @@ import com.hospital.common.ServiceException;
 import com.hospital.dao.ResourceMapDao;
 import com.hospital.model.ResourceMap;
 import com.hospital.service.IResourceMapService;
-/**
+*//**
  * 资源映射接口实现类
  * 
  * @author yubing
  *
- */
+ *//*
 @Service("resourceMapService")
 public class ResourceMapServiceImpl implements IResourceMapService{
 	@Resource(name="resourceMapDao")
@@ -26,7 +26,8 @@ public class ResourceMapServiceImpl implements IResourceMapService{
 		return resourceMapDao.getResourceMapList();	
 	}
 	
-	/*@Autowired
-	private HttpServletRequest request;*/
+	@Autowired
+	private HttpServletRequest request;
 
 }
+*/

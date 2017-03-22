@@ -1,4 +1,4 @@
-package com.hospital.dao;
+/*package com.hospital.dao;
 
 import java.util.List;
 
@@ -8,11 +8,11 @@ import com.hospital.common.Code;
 import com.hospital.common.MybatisBaseDao;
 import com.hospital.common.ServiceException;
 import com.hospital.model.Agenda;
-/**
+*//**
  * 议程DAO
  * @author yubing
  *
- */
+ *//*
 @Repository("agendaDao")
 public class AgendaDao extends MybatisBaseDao<Object,String> {
 	public boolean batchInsertAgendas(List<Agenda> agendas) throws ServiceException{
@@ -25,3 +25,4 @@ public class AgendaDao extends MybatisBaseDao<Object,String> {
     	return true;
 	}
 }
+*/
