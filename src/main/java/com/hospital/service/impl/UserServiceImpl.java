@@ -18,8 +18,11 @@ import com.hospital.constants.AppConstants;
 import com.hospital.dao.UserDao;
 import com.hospital.model.User;
 import com.hospital.service.IUserService;
+import com.hospital.util.Base64Utils;
 import com.hospital.util.CheckUtils;
+import com.hospital.util.ConstantUtils;
 import com.hospital.util.Crypto43DES;
+import com.hospital.util.EncryptUtil;
 /**
  * 用户登陆接口实现
  */
@@ -58,7 +61,7 @@ public class UserServiceImpl implements IUserService{
 		}
 		//2、验证密码
 		if(StringUtils.isNotBlank(password)){
-			password = new String(Crypto43DES.encrypt(password.getBytes()));
+			password = Base64Utils.encodeString(EncryptUtil.MD5Hash(password)+ConstantUtils.SAULTY);
 		}
 		if(!user.getPassword().equals(password)){
 			msg = "密码错误!";
@@ -103,21 +106,25 @@ public class UserServiceImpl implements IUserService{
 	}
 
 	@Override
-	public Map<String, Object> register(String username, String password) throws ServiceException {
+	public Map<String, Object> register(String username, String password, String nickname, String mobile, String code) throws ServiceException {
 		Map<String,Object> map = new HashMap<String,Object>();
-		boolean result = true;
-		String msg = "";
+
+		//判断是否存在用户名
 		User user = this.getUserByUserName(username);
-		
-		if(user != null){
-			msg = "用户名已存在!";
-			result = false;
+		//存在,则返回错误信息
+		if(user!=null){
+			map.put("result", false);
+			map.put("message", "用户名已存在");
 		}else{
-			password = new String(Crypto43DES.encrypt(password.getBytes()));
+			//密码加密方式(base64(md5(str)+网站saulty))
+			password = Base64Utils.encodeString(EncryptUtil.MD5Hash(password)+ConstantUtils.SAULTY);
+			//注册接口
+			userDao.register(username,password,nickname,mobile);
+			map.put("message", "注册成功");
+			map.put("result", true);
 		}
+		return map;
 		
-		
-		return null;
 	}
 	
 }

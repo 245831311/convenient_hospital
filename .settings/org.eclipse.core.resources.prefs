@@ -1,6 +1,9 @@
 eclipse.preferences.version=1
 encoding//src/main/java/com/hospital/action/AgendaController.java=UTF-8
+encoding//src/main/java/com/hospital/action/ConsultController.java=UTF-8
+encoding//src/main/java/com/hospital/action/DoctorController.java=UTF-8
 encoding//src/main/java/com/hospital/action/MeetingController.java=UTF-8
+encoding//src/main/java/com/hospital/action/MyCenterController.java=UTF-8
 encoding//src/main/java/com/hospital/action/ParticipantController.java=UTF-8
 encoding//src/main/java/com/hospital/action/UploadController.java=UTF-8
 encoding//src/main/java/com/hospital/action/UserController.java=UTF-8

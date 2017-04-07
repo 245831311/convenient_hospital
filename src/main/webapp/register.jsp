@@ -20,7 +20,7 @@
 <body>
 <div id="header">
     	<div class="logo">
-        	OnlineCource
+        	便捷医疗系统
         </div>
         <div class="r_help">
         	<ul>
@@ -33,7 +33,7 @@
 </div>
 <div id="middle">
     	<div class="logo_img">
-        	<img src="../image/logo.jpg" height="130px"/>
+        	<img src="./images/doctor/logo.jpg" height="130px"/>
         </div>
          <hr/>
             <div class="r_remind">
@@ -49,44 +49,17 @@
                		<div class="field">
                    		<span class="star">*</span>登陆用户:
                    		<span class="r_input">
-                        	<input type="text" name="user.username" value="${user.username}"/>
-                  		 <s:if test="#request.errorInfo==null">
-		              	 <font color="red">6-20位</font>   	   	 
-	            	   	</s:if>
-	            	   	<s:elseif test="#request.errorInfo.username=='通过'">
-	            	   		<font color="green">${errorInfo.username }</font>	
-	            	   	</s:elseif>
-	            	   	<s:else>
-	            	   		<font color="red">${errorInfo.username }</font>	
-	            	   	</s:else>
+                        	<input type="text" name="user.username" value=""/>
                   		 </span>
                		</div>
-	                   <div class="field"><span class="star">*</span>创建密码:<span class="r_input"><input type="password" name="user.password" value="${user.password }"/>
-	                   <s:if test="#request.errorInfo==null">
-		              	 <font color="red">6-20位</font>   	   	 
-	            	   	</s:if>
-	            	   	<s:elseif test="#request.errorInfo.password=='通过'">
-	            	   		<font color="green">${errorInfo.password }</font>	
-	            	   	</s:elseif>
-	            	   	<s:else>
-	            	   		<font color="red">${errorInfo.password }</font>	
-	            	   	</s:else>
+	                   <div class="field"><span class="star">*</span>创建密码:<span class="r_input"><input type="password" name="user.password" value=""/>
 	                   </span></div>
-	    			   <div class="field"><span class="star">*</span>确认密码:<span class="r_input"><input type="password" name="password2" value="${password2}"/> <font color="red">必填&nbsp&nbsp</font> </span></div>
+	    			   <div class="field"><span class="star">*</span>确认密码:<span class="r_input"><input type="password" name="password2" value=""/> <font color="red">必填&nbsp&nbsp</font> </span></div>
             	</div>
             	<div id="r_myinfo" class="r">
 		                <span class="r-sign">填写个人资料</span>
 		               <div class="field">昵称:<span class="r_input"><input type="text" name="nickname"/>&nbsp&nbsp</span></div>
-		               <div class="field"><span class="star">*</span>个人邮箱:<span class="r_input"><input type="text" name="user.email" value="${user.email }"/>
-		               <s:if test="#request.errorInfo==null">
-		              	 <font color="red">密码找回</font>   	   	 
-	            	   	</s:if>
-	            	   	<s:elseif test="#request.errorInfo.email=='通过'">
-	            	   		<font color="green">${errorInfo.email }</font>	
-	            	   	</s:elseif>
-	            	   	<s:else>
-	            	   		<font color="red">${errorInfo.email }</font>	
-	            	   	</s:else>
+		               <div class="field"><span class="star">*</span>个人邮箱:<span class="r_input"><input type="text" name="user.email" value=""/>
 	            	   	 </span></div>
 		        </div>
 				<div id="r_checkcode" class="r">

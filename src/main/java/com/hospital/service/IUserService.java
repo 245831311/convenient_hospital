@@ -38,10 +38,13 @@ public interface IUserService {
 	
 	/**
 	 * 用户注册
+	 * @param code 
+	 * @param mobile 
+	 * @param nickname 
 	 * 
 	 * @return
 	 * @throws ServiceException
 	 */
-	public Map<String,Object> register(String username, String password) throws ServiceException;
+	public Map<String,Object> register(String username, String password, String nickname, String mobile, String code) throws ServiceException;
 
 }

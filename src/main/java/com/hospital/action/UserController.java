@@ -1,5 +1,6 @@
 package com.hospital.action;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import javax.annotation.Resource;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.alibaba.fastjson.JSONObject;
 import com.hospital.common.Code;
 import com.hospital.common.ResponseEntity;
+import com.hospital.model.User;
 import com.hospital.service.IUserService;
 /**
  * 用户控制器
@@ -39,33 +41,53 @@ public class UserController extends BaseController{
 	public void login(){
 		Map<String,Object> result = null;
 		try {
+			//获取用户名、密码、验证码
 			String username = this.getParamStr(request, "username");
 			String password = this.getParamStr(request, "password");
 			String code = this.getParamStr(request, "code");
-			
+			//调用业务层进行登录
 			result = userService.login(username, password, code);
 		} catch (Exception e) {
+			//异常则打印日记
 			logger.error("[Controller.UserController] validateUserName occur exception!",e);
 		}
-		
+		//以json形式返回前台
 		this.renderJson(response, JSONObject.toJSONString(result));
 	}
 	
 	
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public void register(){
-		ResponseEntity resEntity = new ResponseEntity();
-		resEntity.setCode(Code.CODE_SERVER_ERROR);
+		Map<String,Object> result = null;
 		try {
 			String username = this.getParamStr(request, "username");
+			String nickname = this.getParamStr(request, "nickname");
 			String password = this.getParamStr(request, "password");
+			String mobile = this.getParamStr(request, "mobile");
 			String code = this.getParamStr(request, "code");
 			
-			Map result = userService.register(username,password);
+			result = userService.register(username,password,nickname,mobile,code);
 		}catch(Exception e){
 			logger.error("[Controller.UserController] register occur exception!",e);
 		}
-		
+		//以json形式返回前台
+		this.renderJson(response, JSONObject.toJSONString(result));
+	}
+	
+	@RequestMapping(value = "/logOut")
+	public void logOut(){
+		Map<String,Object> result = new HashMap<String,Object>();
+		try {
+			User user = (User) this.session.getAttribute("user");
+			if(user != null){
+				this.session.setAttribute("user", null);
+				result.put("message", "logOut");
+			}
+		}catch(Exception e){
+			logger.error("[Controller.UserController] logOut occur exception!",e);
+		}
+		//以json形式返回前台
+		this.renderJson(response, JSONObject.toJSONString(result));
 	}
 	
 }

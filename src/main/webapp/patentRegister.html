@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<title>病人管理</title>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		
+	    <script src="js/bootstrap.js"></script>
+   		<link href="css/bootstrap.css" rel="stylesheet" />
+    
+	    <script src="js/bootstrap-table.js"></script>
+	    <link href="css/bootstrap-table.css" rel="stylesheet" />
+	    <script src="js/bootstrap-table-zh-CN.js"></script>
+
+	</head>
+	
+	<body style="padding:0px;margin:0px;">
+		 <div class="panel-body" style="padding-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">查询条件</div>
+            <div class="panel-body">
+                <form id="formSearch" class="form-horizontal">
+                    <div class="form-group" style="margin-top:15px">
+                        <label class="control-label col-sm-1" for="txt_search_departmentname">用户名称</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="txt_search_departmentname">
+                        </div>
+                        <label class="control-label col-sm-1" for="txt_search_statu">状态</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="txt_search_statu">
+                        </div>
+                        <div class="col-sm-4" style="text-align:left;">
+                            <button type="button" style="margin-left:50px" id="btn_query" class="btn btn-primary">查询</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>       
+	</body>
+</html>

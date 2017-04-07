@@ -71,4 +71,10 @@ public class UserDao extends MybatisBaseDao<Object,String> {
 		return list;
 	}
 
+	public void register(String username, String password, String nickname,
+			String mobile) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

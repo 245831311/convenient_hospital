@@ -1,7 +1,5 @@
 <%@page import="com.hospital.model.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
-<%-- <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt"  prefix="fmt"%> --%>
 <%@include file="page/base/tag.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,23 +24,6 @@
 		<link rel="stylesheet" href="${baseurl }/plugins/assets/css/ace-rtl.min.css" />
 		<link rel="stylesheet" href="${baseurl }/plugins/assets/css/ace-skins.min.css" />
 		<link href="${baseurl }/css/common.css" rel="stylesheet" />
-
-		<!--[if lte IE 8]>
-		  <link rel="stylesheet" href="${baseurl }/plugins/assets/css/ace-ie.min.css" />
-		<![endif]-->
-
-		<!-- inline styles related to this page -->
-
-		<!-- ace settings handler -->
-
-		<script src="${baseurl }/plugins/assets/js/ace-extra.min.js"></script>
-
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-
-		<!--[if lt IE 9]>
-		<script src="${baseurl }/plugins/assets/js/html5shiv.js"></script>
-		<script src="${baseurl }/plugins/assets/js/respond.min.js"></script>
-		<![endif]-->
 	</head>
 
 	<body style="overflow: hidden;">
@@ -55,10 +36,10 @@
 			</script>
 
 			<div class="navbar-container" id="navbar-container">
-				<div class="navbar-header pull-left">
+				<!-- <div class="navbar-header pull-left">
 					<img src="images/base/loginLogo.png" class="fl" />
-					<!-- /.brand -->
-				</div>
+					/.brand
+				</div> -->
 				<!-- /.navbar-header -->
 
 				<div class="navbar-header pull-right" role="navigation">
@@ -123,10 +104,9 @@
 				<p class="leftTop"><i class="fr icon-indent-left"></i><span>工作导航</span></p>
 				<ul class="nav nav-list">
 					<li>
-						<a href="#" class="">
+						<a href="#" class="open" id="whole">
 							<i class="icon-cloud"></i>
 							<span class="menu-text">总览 </span>
-
 						</a>
 						
 					</li>
@@ -139,12 +119,16 @@
 						</a>
 
 						<ul class="submenu">
+							<!-- <li>
+								<a href="javascript:;" id="patentManage">
+									 用户管理
+								</a>
+							</li> -->
 							<li>
-								<a href="javascript:;" id="">
-									 病人管理
+								<a href="javascript:;" id="patentRegister">
+									 病人审阅
 								</a>
 							</li>
-
 						</ul>
 					</li>
 					<li>
@@ -158,7 +142,7 @@
 						<ul class="submenu">
 							<li>
 								<a href="javascript:;" id="">
-									 
+									 人数统计
 								</a>
 							</li>
 
@@ -178,20 +162,9 @@
 									 即时会议
 								</a>
 							</li>
-
-							<li>
-								<a href="javascript:;" id="bb">
-									预约会议
-								</a>
-							</li>
 							<li>
 								<a href="javascript:;" id="historyRecord">
 									历史会议
-								</a>
-							</li>
-							<li>
-								<a href="javascript:;" id="addressList">
-									企业通讯录
 								</a>
 							</li>
 						</ul>
@@ -216,7 +189,7 @@
 
 						<!-- 
 						 -->
-						<iframe src="${baseurl }/instantMeeting.jsp" id="iframePage" name="iframePage" frameborder="0" width="100%"></iframe>
+						<iframe src="${baseurl }/whole.html" id="iframePage" name="iframePage" frameborder="0" width="100%"></iframe>
 
 					</div>
 				</div>

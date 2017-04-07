@@ -8,6 +8,15 @@ $(function() {
 	$("#instantMeeting").bind('click', function() {
 		$("#iframePage").attr("src", "instantMeeting.jsp");
 	})
+	$("#whole").bind('click', function() {
+		$("#iframePage").attr("src", "whole.html");
+	})
+	$("#patentRegister").bind('click', function() {
+		$("#iframePage").attr("src", "patentRegister.html");
+	})
+	$("#patentManage").bind('click', function() {
+		$("#iframePage").attr("src", "patentManage.html");
+	})
 	$("#personMain").bind('click', function() {
 		$("#iframePage").attr("src", "personMessage.html");
 	});
@@ -19,10 +28,11 @@ $(function() {
 	});
 	$('.dropdown-toggle').click(function(event) {
 		if($(this).children('.icon-angle-down').hasClass('icon-angle-up')) {
-
 			$(this).children('.icon-angle-down').removeClass('icon-angle-up');
 
-		} else {
+		} else if($(this).attr("id") == "whole"){
+			
+		}else{
 
 			$(this).children('.icon-angle-down').addClass('icon-angle-up');
 			$(this).parent().siblings().find('.icon-angle-down').removeClass('icon-angle-up');
@@ -33,8 +43,8 @@ $(function() {
 		if($(this).hasClass('icon-indent-right')) {
 			$('.icon-indent-left').removeClass('icon-indent-right');
 			showMenu();
-
-		} else {
+		}
+		else{
 			$('.icon-indent-left').addClass('icon-indent-right');
 			hideMenu();
 		}

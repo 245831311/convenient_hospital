@@ -51,16 +51,15 @@
     margin-left: 250px">
         	<ul>
             	<div style="margin-bottom:40px">
-                	<div>
                     	<li>
-                              <div class="left"><img src="./images/doctor/chenhao.jpg"/></div>
+                              <div class="left"><img src="./images/doctor/doctor.jpg"/></div>
                               
                                 <div class="middle right">
-                                	<div class="name" > 陈浩教授</div>
+                                	<div class="name" > 陈景明</div>
                                 
-                                    <div class="scope" >评分:10分</div>
-                                    <div class="age" >教龄:十年</div>
-                                    <div class="major">擅长:不知道</div>
+                                    <div class="scope" >年龄:35岁</div>
+                                    <div class="age" >入职时间:2007</div>
+                                    <div class="major">就医时间:10年</div>
                                     <div class="intro">简介:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                                     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
                                 	<div class="infoRight" >
@@ -71,11 +70,30 @@
                                 		<a href="/user/login.html" ka="header-login" class="btn btn-outline">在线咨询</a>
                                		</div>
                                 </div>
-                                
-                                
                    		</li>
-                    </div>
-                </div>  
+                </div>
+                <div style="margin-bottom:40px">
+                    	<li>
+                              <div class="left"><img src="./images/doctor/doctor.jpg"/></div>
+                              
+                                <div class="middle right">
+                                	<div class="name" > 梁新</div>
+                                
+                                    <div class="scope" >年龄:29岁</div>
+                                    <div class="age" >入职时间:2013</div>
+                                    <div class="major">就医时间:4年</div>
+                                    <div class="intro">简介:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+                                	<div class="infoRight" >
+                                		<a href="./doctor_info.jsp" target="_blank" ka="header-register" class="btn btn-outline">详情</a>
+                                		&nbsp;&nbsp;&nbsp;
+                                		<a href="/user/login.html" ka="header-login" class="btn btn-outline">预约挂号</a>
+                                		&nbsp;&nbsp;&nbsp;
+                                		<a href="/user/login.html" ka="header-login" class="btn btn-outline">在线咨询</a>
+                               		</div>
+                                </div>
+                   		</li>
+                </div>    
             </ul>
         </div>
     

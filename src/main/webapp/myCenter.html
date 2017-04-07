@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<title>个人中心</title>
+		<link rel="shortcut icon" type="image/x-icon" href="img/icon.png" media="screen" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/myCenter.js"></script>
+		<script type="text/javascript">
+			function changeFrameHeight(){
+			    var ifm= document.getElementById("iframePage"); 
+			    ifm.height=$(window).height();
+			}
+		
+		</script>
+		<style type="text/css">
+			a{
+				color: inherit;
+			    text-decoration: none;
+			    outline: none;
+			    font-weight:bold;
+			}
+			.nav{
+				    height: 32px;
+				    width: 950px;
+				    margin-top: 5px;
+				    margin-right: auto;
+				    margin-bottom: 0px;
+				    margin-left: auto;
+				    padding-right: 25px;
+				    padding-bottom: 8px;
+				    
+			}
+			.nav ul{
+				padding-top:5px;
+				padding-left: 325px;
+				list-style: none;
+			}			
+			.nav ul li{
+				margin-right:30px;
+				float:left;
+			}
+			
+		</style>
+	</head>
+	
+	<body style="padding:0px;margin:0px;">
+		<div class="top" style="text-align: center;margin-top:30px;">
+			<img alt="" src="./images/main/user.jpg" style="width:150px;height:150px;">
+		</div>
+		<div style="text-align: center;margin-top:10px;">周周</div>
+		<div class="nav">
+		    <ul>
+		      <li><a href="./main.html">首 页</a></li>
+		      <li><a href="#" id="myReport">我的报告</a></li>
+		      <li><a href="#" id="myRegister">我的挂号</a></li>
+		       <li><a href="#" id="logOut">注销</a></li>
+		    </ul>  
+ 		</div>
+		<div style="width:975px;margin:auto;">
+			<iframe src="" id="iframePage" name="iframePage" frameborder="0" width="100%" scrolling="no" onload="changeFrameHeight()"></iframe>
+		</div>
+	</body>
+</html>

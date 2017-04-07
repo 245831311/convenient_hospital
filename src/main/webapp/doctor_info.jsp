@@ -16,18 +16,18 @@
 <div class="teacher_info">
     	<div class="teacher_detail">
         	<dl>
-            	<dt><img src="../image/chenhao.jpg" width="197px" height="197px" style="border:#06F;border-color:#0CF;"/>
+            	<dt><img src="./images/doctor/doctor.jpg" width="197px" height="197px" style="border:#06F;border-color:#0CF;"/>
                 <p>ID:709394</p>
                 </dt>
                 
             	<dd>
-                	<div class="line">陈老师</div>
-                    <div class="line" style="color:#f39800">全能|几十年教龄</div>
+                	<div class="line">陈景明</div>
+                    <div class="line" style="color:#f39800">眼科|10年医领</div>
 					<div class="line">
-                    	<img src="../image/zl4.png">&nbsp;身份认证&nbsp;&nbsp;&nbsp;&nbsp;</img>
-                        <img src="../image/zl1.png">&nbsp;学历认证&nbsp;&nbsp;&nbsp;&nbsp;</img>
-                        <img src="../image/zl2.png">&nbsp;资质认证&nbsp;&nbsp;&nbsp;&nbsp;</img>
-                        <img src="../image/zl3.png">&nbsp;职称认证</img>
+                    	<img src="./images/doctor/zl4.png">&nbsp;身份认证&nbsp;&nbsp;&nbsp;&nbsp;</img>
+                        <img src="./images/doctor/zl1.png">&nbsp;学历认证&nbsp;&nbsp;&nbsp;&nbsp;</img>
+                        <img src="./images/doctor/zl2.png">&nbsp;资质认证&nbsp;&nbsp;&nbsp;&nbsp;</img>
+                        <img src="./images/doctor/zl3.png">&nbsp;职称认证</img>
                     </div>
                 	<div class="line">
                     	<ul class="tag-list">
@@ -45,13 +45,13 @@
         	<div class="nav">
             	<ul>
                 	<li class="active">
-                    	<a href="#teach_xq">教师详情</a>
+                    	<a href="#teach_xq">医生详情</a>
                     </li>
                 	<li>
-                    	<a href="#teach_cg">成果展现</a>
+                    	<a href="#teach_cg">就医成果</a>
                     </li>
                     <li>
-                    	<a href="#cource_pj">课程评价</a>
+                    	<a href="#cource_pj">用户评价</a>
                     </li>
                 </ul>
             </div>
@@ -59,7 +59,7 @@
         <div class="personal_Intro">
         	<div class="teach_xq" id="teach_xq">
             	<h2>
-                	<img src="../image/icon2.png"/>
+                	<img src="./images/doctor/icon2.png"/>
                     个人简介
                 </h2>
                 <p>
@@ -74,21 +74,21 @@
         <div class="teach_cg" id="teach_cg">
         	<div class="inner">
             	<h2>
-                	<img src="../image/icon3.png"/>
-                	教育成果
+                	<img src="./images/doctor/icon3.png"/>
+                	就医成果
                 </h2>
                 <div>
                 	<ul>
                     	<li>
-                        	<img src="../image/cg1.png" width="674px" height="449px"/>
+                        	<img src="./images/doctor/cg1.png" width="674px" height="449px"/>
                         </li>
                         <hr />
-                        <li>
-                        	<img src="../image/cg2.png" width="674px" height="449px"/>
-                        </li>
+                        <!-- <li>
+                        	<img src="./images/doctor/cg2.png" width="674px" height="449px"/>
+                        </li> -->
                         <hr />
                         <li>
-                        	<img src="../image/cg3.png" width="674px" height="449px"/>
+                        	<img src="./images/doctor/cg3.png" width="674px" height="449px"/>
                         </li>
                     </ul>
                 </div>
@@ -97,15 +97,15 @@
         <div class="cource_pj" id="cource_pj">
         	<div class="inner">
             	<h2>
-                	<img src="../image/icon4.png"/>
-                	课程评价
+                	<img src="./images/doctor/icon4.png"/>
+                	用户评价
                 </h2>
             	<div class="pj">
                 	<ul>
                     	<li>
                         	<dl>
                             	<dt>
-                                	<img src="../image/teacher-head.png"/>
+                                	<img src="./images/doctor/teacher-head.png"/>
                                 </dt>
                                 <dd>
                                 	<p>137****4758&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -116,7 +116,7 @@
                                         <img src="../image/star.png"/>
 										<span style="padding-left:200px">                   2015-12-26 21:33:01</span>
                                     </p>
-                                    <p align="center">老师讲得好厉害</p>
+                                    <p align="center">不错！不错！</p>
                                 </dd>
                             
                             </dl>
@@ -125,18 +125,18 @@
                		        	<li>
                         	<dl>
                             	<dt>
-                                	<img src="../image/teacher-head.png"/>
+                                	<img src="./images/doctor/teacher-head.png"/>
                                 </dt>
                                 <dd>
                                 	<p>137****4228&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    	<img src="../image/star.png"/>
-                                        <img src="../image/star.png"/>
-                                        <img src="../image/star.png"/>
-                                        <img src="../image/star.png"/>
-                                        <img src="../image/star.png"/>
+                                    	<img src="./images/doctor/star.png"/>
+                                        <img src="./images/doctor/star.png"/>
+                                        <img src="./images/doctor/star.png"/>
+                                        <img src="./images/doctor/star.png"/>
+                                        <img src="./images/doctor/star.png"/>
 										<span style="padding-left:200px">                   2015-12-26 18:38:52</span>
                                     </p>
-                                    <p align="center">老师很好，教课认真，孩子愿意学！</p>
+                                    <p align="center">医生很好,对病人耐心！</p>
                                 </dd>
                             
                             </dl>
@@ -145,18 +145,18 @@
                         <li>
                         	<dl>
                             	<dt>
-                                	<img src="../image/teacher-head.png"/>
+                                	<img src="./images/doctor/teacher-head.png"/>
                                 </dt>
                                 <dd>
                                 	<p>157****5243&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    	<img src="../image/star.png"/>
-                                        <img src="../image/star.png"/>
-                                        <img src="../image/star.png"/>
-                                        <img src="../image/star.png"/>
-                                        <img src="../image/star.png"/>
+                                    	<img src="./images/doctor/star.png"/>
+                                        <img src="./images/doctor/star.png"/>
+                                        <img src="./images/doctor/star.png"/>
+                                        <img src="./images/doctor/star.png"/>
+                                        <img src="./images/doctor/star.png"/>
 										<span style="padding-left:200px">                   2015-12-22 09:25:25</span>
                                     </p>
-                                    <p align="center">老师有责任心、有耐心、能把繁琐问题简单化！</p>
+                                    <p align="center">医生有责任心、有耐心、对病人耐心！</p>
                                 </dd>
                             
                             </dl>

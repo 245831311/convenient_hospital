@@ -21,6 +21,8 @@ public class User implements Serializable{
 	private String headUrl;
 	
 	private String createTime;
+	
+	private String userName;
 
 	public String getId() {
 		return id;
@@ -84,6 +86,14 @@ public class User implements Serializable{
 
 	public void setCreateTime(String createTime) {
 		this.createTime = createTime;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	@Override
